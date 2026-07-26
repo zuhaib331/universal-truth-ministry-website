@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog | Universal Truth Ministry</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#fffbeb',
+            400: '#d4a015',
+            500: '#b8860f',
+            900: '#1e293b',
+          },
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+
+<body class="antialiased bg-white text-slate-600 font-sans">
+
+<!-- NAV -->
+<header class="bg-slate-900">
+  <nav class="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
+    <a href="../index.html" class="flex items-center gap-3">
+      <img src="../images/logo.jpg" alt="Universal Truth Ministry logo" class="w-10 h-10 rounded-full object-cover bg-white" />
+      <span class="text-white font-semibold tracking-wide">Universal Truth Ministry</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
+      <a href="../index.html#about" class="hover:text-brand-400 transition-colors">About</a>
+      <a href="../index.html#values" class="hover:text-brand-400 transition-colors">Core Values</a>
+      <a href="../index.html#work" class="hover:text-brand-400 transition-colors">Our Work</a>
+      <a href="index.html" class="text-brand-400">Blog</a>
+      <a href="../index.html#contact" class="hover:text-brand-400 transition-colors">Contact</a>
+    </div>
+    <a href="../index.html#contact" class="px-5 py-2 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Get In Touch</a>
+  </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="bg-slate-900 py-16">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">Latest News</p>
+    <h1 class="text-white font-semibold text-4xl">Blog</h1>
+  </div>
+</section>
+
+<!-- POST LIST -->
+<!--
+  HOW TO ADD A NEW BLOG POST (no code changes needed anywhere else):
+  1. Copy "post-template.html" in this same /blog/ folder.
+  2. Rename the copy, e.g. "new-scholarship-program.html".
+  3. Open it and replace the title, date, and body text.
+  4. Add one new <a> card below (copy one of the existing <a> blocks in the
+     grid, change its href, image, title, and short summary text).
+  That's it -- no other file needs to change.
+-->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <a href="post-template.html" class="group block bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow">
+        <img src="../images/teaching.jpg" alt="Post thumbnail" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <p class="text-xs uppercase tracking-wide text-brand-500 mb-2">27 July 2026</p>
+          <h2 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-brand-500 transition-colors">Welcome to Our Blog</h2>
+          <p class="text-sm leading-relaxed">This is an example post. Duplicate this file to publish your own updates about the Education Center and the ministry's work.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 border-t border-white/10 py-8">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-white/70 text-sm">&copy; 2026 Universal Truth Ministry. All rights reserved.</p>
+    <a href="https://www.linkedin.com/company/universal-truth-ministry/" target="_blank" rel="noopener"
+       class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-400 transition-colors">
+      <i data-lucide="linkedin" class="w-4 h-4"></i>
+    </a>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

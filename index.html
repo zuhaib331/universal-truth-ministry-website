@@ -3,218 +3,273 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Universal Truth Ministry</title>
+<title>Universal Truth Ministry | Christian Children's Education in Layyah, South Punjab</title>
+<meta name="description" content="Universal Truth Ministry runs a Christian children's education center in Layyah, South Punjab, Pakistan, offering quality education and faith-based learning." />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://universaltruthministry.org/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Universal Truth Ministry" />
+<meta property="og:title" content="Universal Truth Ministry | Christian Children's Education in Layyah, South Punjab" />
+<meta property="og:description" content="Universal Truth Ministry runs a Christian children's education center in Layyah, South Punjab, Pakistan, offering quality education and faith-based learning." />
+<meta property="og:url" content="https://universaltruthministry.org/" />
+<meta property="og:image" content="https://universaltruthministry.org/og-image.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Universal Truth Ministry | Christian Children's Education in Layyah, South Punjab" />
+<meta name="twitter:description" content="Universal Truth Ministry runs a Christian children's education center in Layyah, South Punjab, Pakistan, offering quality education and faith-based learning." />
+<meta name="twitter:image" content="https://universaltruthministry.org/og-image.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="styles.css" />
+<script src="lucide.min.js"></script>
 
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: {
-            50: '#fffbeb',
-            400: '#d4a015',
-            500: '#b8860f',
-            900: '#1e293b',
-          },
-        },
-        fontFamily: {
-          sans: ['Inter', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
+<style>
+  h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
+</style>
 </head>
 
 <body class="antialiased bg-white text-slate-600 font-sans">
 
 <!-- NAV -->
-<header class="bg-slate-900">
+<header class="bg-slate-900 relative z-50">
   <nav class="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
-    <a href="#" class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3">
       <img src="images/logo.jpg" alt="Universal Truth Ministry logo" class="w-10 h-10 rounded-full object-cover bg-white" />
       <span class="text-white font-semibold tracking-wide">Universal Truth Ministry</span>
     </a>
+
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
-      <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
-      <a href="#values" class="hover:text-brand-400 transition-colors">Core Values</a>
-      <a href="#work" class="hover:text-brand-400 transition-colors">Our Work</a>
-      <a href="blog/index.html" class="hover:text-brand-400 transition-colors">Blog</a>
-      <a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a>
+      <div class="relative group">
+        <button class="flex items-center gap-1 py-8 hover:text-brand-400 transition-colors" aria-haspopup="true" aria-expanded="false">
+          About Us
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+        </button>
+        <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block bg-slate-900 border-t-2 border-brand-400 rounded-b-lg shadow-xl min-w-[220px] py-2">
+          <a href="our-story.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Our Story</a>
+          <a href="vision-mission.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Vision &amp; Mission</a>
+          <a href="core-values.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Core Values</a>
+          <a href="our-team.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Our Team</a>
+          <a href="programs.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">What We Do</a>
+          <a href="impact.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Impact</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="flex items-center gap-1 py-8 hover:text-brand-400 transition-colors" aria-haspopup="true" aria-expanded="false">
+          Get Involved
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+        </button>
+        <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block bg-slate-900 border-t-2 border-brand-400 rounded-b-lg shadow-xl min-w-[200px] py-2">
+          <a href="get-involved.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">How to Help</a>
+          <a href="donate.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Donate</a>
+          <a href="volunteer.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Volunteer</a>
+          <a href="prayer.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Prayer</a>
+          <a href="contact.html" class="block px-5 py-2.5 hover:bg-white/5 hover:text-brand-400 transition-colors">Contact</a>
+        </div>
+      </div>
+
+      <!-- Blog link hidden until first real post: <a href="blog/index.html" class="hover:text-brand-400 transition-colors">Blog</a> -->
     </div>
-    <a href="#contact" class="px-5 py-2 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Get In Touch</a>
+
+    <a href="get-involved.html" class="hidden md:inline-block px-5 py-2 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Support Us</a>
+
+    <button id="mobile-menu-btn" class="md:hidden text-white p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
   </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-white/10 px-6 py-5 space-y-1 text-sm text-white/80">
+    <p class="uppercase text-xs tracking-wide text-brand-400 pt-1 pb-1">About Us</p>
+    <a href="our-story.html" class="block py-2">Our Story</a>
+    <a href="vision-mission.html" class="block py-2">Vision &amp; Mission</a>
+    <a href="core-values.html" class="block py-2">Core Values</a>
+    <a href="our-team.html" class="block py-2">Our Team</a>
+    <a href="programs.html" class="block py-2">What We Do</a>
+    <a href="impact.html" class="block py-2">Impact</a>
+    <p class="uppercase text-xs tracking-wide text-brand-400 pt-4 pb-1">Get Involved</p>
+    <a href="get-involved.html" class="block py-2">How to Help</a>
+    <a href="donate.html" class="block py-2">Donate</a>
+    <a href="volunteer.html" class="block py-2">Volunteer</a>
+    <a href="prayer.html" class="block py-2">Prayer</a>
+    <a href="contact.html" class="block py-2">Contact</a>
+    <!-- Blog link hidden until first real post: <a href="blog/index.html" class="block py-2 mt-3 border-t border-white/10 pt-4">Blog</a> -->
+  </div>
 </header>
 
 <!-- HERO -->
-<section class="relative min-h-[70vh] flex items-center">
+<section class="relative min-h-[70vh] flex items-center overflow-hidden">
   <img
     src="images/hero.jpg"
-    alt="Students at Universal Truth Education Center, Layyah"
+    alt="Children in a rural community in Pakistan. This is a representative stock image, not a photo of our own students."
     class="absolute inset-0 w-full h-full object-cover"
   />
   <div class="absolute inset-0 bg-slate-900/75"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 text-center">
-    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-6">Raising Christ-Centered Leaders</p>
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-6">Educating Christian Children in Layyah, South Punjab, Pakistan</p>
     <h1 class="text-white font-semibold text-4xl md:text-5xl leading-tight max-w-3xl mx-auto mb-6">
-      We want children everywhere to have a future of hope, education, and purpose.
+      &ldquo;Let the little children come to me, and do not hinder them, for the kingdom of heaven
+      belongs to such as these.&rdquo;
+      <span class="block text-brand-400 text-xl md:text-2xl font-medium mt-3">Matthew 19:14</span>
     </h1>
-    <p class="text-white/80 max-w-2xl mx-auto mb-10">
-      To raise a new generation of Christ-centered leaders who transform families and communities
-      across Pakistan and beyond.
-    </p>
-    <div class="flex flex-wrap items-center justify-center gap-4">
-      <a href="#contact" class="px-8 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Support Our Work</a>
-      <a href="#about" class="px-8 py-3 rounded-full border border-white/40 text-white text-sm font-medium hover:bg-white/10 transition-colors">Learn More</a>
+    <div class="flex justify-center">
+      <div class="w-24 border-t-2 border-dashed border-brand-400/60"></div>
     </div>
+  </div>
+
+  <p class="absolute bottom-3 right-4 text-white/60 text-[11px] z-10">
+    Representative stock image (Source: Pexels)
+  </p>
+
+  <a href="#why-this-matters" aria-label="Scroll down" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-white/60 hover:text-brand-400 transition-colors animate-bounce">
+    <i data-lucide="chevron-down" class="w-6 h-6"></i>
+  </a>
+</section>
+
+<!-- WHY THIS MATTERS -->
+<section id="why-this-matters" class="py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center mb-16">
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">Why This Matters</p>
+    <h2 class="text-3xl font-semibold text-slate-900 leading-snug">
+      Christian children in South Punjab are often the first left out of a good education.
+      We believe every child deserves a chance to learn, grow in faith, and thrive.
+    </h2>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-6 mb-20">
+    <div class="grid grid-cols-[2.5rem_1fr] md:grid-cols-[3.5rem_1fr] gap-x-6 gap-y-2 py-7 border-t border-b border-slate-100 items-start">
+      <span class="font-semibold text-brand-400" style="font-family:'Fraunces',serif;font-size:2rem;line-height:1;">01</span>
+      <div>
+        <p class="leading-relaxed text-sm">
+          Christian communities across Punjab, including here in the south, are among Pakistan's
+          poorest and most excluded. A 2021 study of Christian-run schools in the province found 79%
+          were slum-based, charging under 2,000 rupees a month, many with broken windows, no
+          benches, or working toilets.
+        </p>
+        <p class="text-xs text-slate-400 mt-2">Source: Center for Social Justice, via UCA News</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-[2.5rem_1fr] md:grid-cols-[3.5rem_1fr] gap-x-6 gap-y-2 py-7 border-b border-slate-100 items-start">
+      <span class="font-semibold text-brand-400" style="font-family:'Fraunces',serif;font-size:2rem;line-height:1;">02</span>
+      <p class="leading-relaxed text-sm">
+        We're already there. The Universal Truth Education Center is rooted in Layyah, South
+        Punjab, run by people this community already knows and trusts.
+      </p>
+    </div>
+    <div class="grid grid-cols-[2.5rem_1fr] md:grid-cols-[3.5rem_1fr] gap-x-6 gap-y-2 py-7 border-b border-slate-100 items-start">
+      <span class="font-semibold text-brand-400" style="font-family:'Fraunces',serif;font-size:2rem;line-height:1;">03</span>
+      <p class="leading-relaxed text-sm">
+        By combining quality education with Christ-centered discipleship, we give Christian
+        children in Layyah, our first step toward serving all of South Punjab, a real chance
+        to break the cycle of poverty and exclusion.
+      </p>
+    </div>
+  </div>
+
+  <div class="bg-slate-50 py-16">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <img loading="lazy" decoding="async" src="images/classroom-writing.jpg" alt="Students at the Universal Truth Education Center writing during a lesson"
+        class="w-full h-80 object-cover rounded-xl" />
+      <div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-4">
+          We exist to educate children, train leaders, and develop communities through
+          Christ-centered programs.
+        </h3>
+        <p class="leading-relaxed text-sm">
+          Right now, that means running the Universal Truth Education Center in Layyah, South
+          Punjab, with daily classes in core subjects alongside Bible-based discipleship, taught by
+          local teachers who know these families personally. It's one center and one classroom
+          today, with plans to grow into vocational training and wider community development
+          across South Punjab as the ministry grows.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-6 text-center pt-16">
+    <p class="text-2xl font-semibold text-slate-900 leading-snug">
+      For ten years we opened our doors to the children of our community. Since January 2024,
+      that calling has become a ministry, still young, but growing stronger by the day.
+    </p>
   </div>
 </section>
 
-<!-- ABOUT / MISSION -->
-<section id="about" class="py-24">
+<!-- IMPACT TEASER (stat block, mirroring viva.org's stats pattern) -->
+<section class="bg-slate-900 py-20">
   <div class="max-w-4xl mx-auto px-6 text-center">
-    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">Our Mission</p>
-    <h2 class="text-3xl font-semibold text-slate-900 mb-6">Educate. Train. Develop.</h2>
-    <p class="leading-relaxed text-lg">
-      Universal Truth Ministry exists to educate children, train leaders, and develop communities
-      through Christ-centered programs — including quality education, vocational and technical
-      skills training, and community development. Rooted in the Christian community, we serve
-      everyone in need across Pakistan's remote and neglected areas, following the teaching of Jesus.
-    </p>
-  </div>
-</section>
-
-<!-- CORE VALUES -->
-<section id="values" class="bg-slate-50 py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center max-w-xl mx-auto mb-16">
-      <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">What Guides Us</p>
-      <h2 class="text-3xl font-semibold text-slate-900">Our Core Values</h2>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center mb-5">
-          <i data-lucide="flame" class="w-5 h-5 text-brand-500"></i>
-        </div>
-        <h3 class="text-lg font-semibold text-slate-900 mb-2">Faith</h3>
-        <p class="text-sm leading-relaxed">Complete trust in Jesus Christ, guiding every decision and action.</p>
-      </div>
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center mb-5">
-          <i data-lucide="heart" class="w-5 h-5 text-brand-500"></i>
-        </div>
-        <h3 class="text-lg font-semibold text-slate-900 mb-2">Love</h3>
-        <p class="text-sm leading-relaxed">Serving others with the love of Christ, with kindness and care.</p>
-      </div>
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center mb-5">
-          <i data-lucide="hand-heart" class="w-5 h-5 text-brand-500"></i>
-        </div>
-        <h3 class="text-lg font-semibold text-slate-900 mb-2">Service</h3>
-        <p class="text-sm leading-relaxed">Serving others selflessly, expecting nothing in return.</p>
-      </div>
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center mb-5">
-          <i data-lucide="shield-check" class="w-5 h-5 text-brand-500"></i>
-        </div>
-        <h3 class="text-lg font-semibold text-slate-900 mb-2">Integrity</h3>
-        <p class="text-sm leading-relaxed">Working honestly and truthfully, accountable to God and the people we serve.</p>
-      </div>
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center mb-5">
-          <i data-lucide="star" class="w-5 h-5 text-brand-500"></i>
-        </div>
-        <h3 class="text-lg font-semibold text-slate-900 mb-2">Excellence</h3>
-        <p class="text-sm leading-relaxed">Doing our best in everything, to bring glory to God.</p>
-      </div>
-      <div class="bg-white p-8 rounded-xl shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center mb-5">
-          <i data-lucide="eye" class="w-5 h-5 text-brand-500"></i>
-        </div>
-        <h3 class="text-lg font-semibold text-slate-900 mb-2">Transparency</h3>
-        <p class="text-sm leading-relaxed">Being open about decisions, finances, and actions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OUR WORK -->
-<section id="work" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-      <div class="grid grid-cols-2 gap-3">
-        <img
-          src="images/teaching.jpg"
-          alt="Teaching session at Universal Truth Education Center"
-          class="col-span-2 w-full h-[300px] object-contain bg-slate-100 rounded-xl p-2"
-        />
-        <img
-          src="images/group.jpg"
-          alt="Students at Universal Truth Education Center, Layyah"
-          class="w-full h-[150px] object-cover rounded-xl"
-        />
-        <img
-          src="images/writing.jpg"
-          alt="Students studying at Universal Truth Education Center"
-          class="w-full h-[150px] object-cover rounded-xl"
-        />
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">Our Impact</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
+      <div>
+        <p class="text-5xl font-semibold text-white mb-2">40+</p>
+        <p class="text-white/70 text-sm">Christian children currently receiving education and faith-based training</p>
       </div>
       <div>
-        <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">Current Project</p>
-        <h2 class="text-3xl font-semibold text-slate-900 mb-2">Universal Truth Education Center</h2>
-        <p class="flex items-center gap-2 text-sm font-medium text-brand-500 mb-6">
-          <i data-lucide="map-pin" class="w-4 h-4"></i>
-          Layyah, Pakistan
-        </p>
-        <p class="leading-relaxed mb-6">
-          Our current project is the Universal Truth Education Center in Layyah, already serving
-          <strong>40+ Christian children from families with limited financial and educational
-          resources</strong>, providing quality education and faith-based training in a remote and
-          under-resourced community.
-        </p>
-        <p class="leading-relaxed mb-8">
-          As we grow, our plans include a scholarship program, vocational training, foster care and
-          child welfare support, and broader community development initiatives.
-        </p>
-        <ul class="space-y-3">
-          <li class="flex items-center gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
-            <span class="text-sm">Quality, Christ-centered education</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
-            <span class="text-sm">Vocational and technical skills training</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
-            <span class="text-sm">Community development in Pakistan's remote areas</span>
-          </li>
-        </ul>
+        <p class="text-5xl font-semibold text-white mb-2">1</p>
+        <p class="text-white/70 text-sm">Education Center running, in Layyah, South Punjab, Pakistan</p>
       </div>
+      <div>
+        <p class="text-5xl font-semibold text-white mb-2">6</p>
+        <p class="text-white/70 text-sm">Core values guiding every program we run</p>
+      </div>
+    </div>
+    <a href="impact.html" class="inline-flex items-center gap-2 text-brand-400 font-medium hover:text-brand-300 transition-colors">
+      See our full impact
+      <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    </a>
+  </div>
+</section>
+
+<!-- GET INVOLVED CTA -->
+<section class="py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">Get Involved</p>
+    <h2 class="text-3xl font-semibold text-slate-900 mb-6">Will you join us?</h2>
+    <p class="leading-relaxed max-w-xl mx-auto mb-10">
+      Prayer, time, or giving: there are a few simple ways to stand with us, and each one helps.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="prayer.html" class="px-6 py-3 rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:border-brand-400 hover:text-brand-500 transition-colors">Pray</a>
+      <a href="volunteer.html" class="px-6 py-3 rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:border-brand-400 hover:text-brand-500 transition-colors">Volunteer</a>
+      <a href="donate.html" class="px-6 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Give</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="bg-slate-900 py-24">
+<!-- STAY UPDATED (mirrors viva.org's newsletter signup band) -->
+<section class="relative py-16 bg-slate-900 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900/40"></div>
+  <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
+    <h2 class="text-2xl font-semibold text-white mb-3">Stay updated on our work</h2>
+    <div class="flex justify-center my-6">
+      <div class="w-20 border-t-2 border-dashed border-brand-400/60"></div>
+    </div>
+    <p class="text-white/70 text-sm mb-8">
+      We love keeping in touch personally. Reach out and we'll share what's happening at the
+      Education Center and across the Ministry, straight from our team.
+    </p>
+    <a href="contact.html" class="inline-block px-8 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">
+      Get Updates From Us
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT (teaser) -->
+<section id="contact" class="bg-slate-900 py-24 border-t border-white/10">
   <div class="max-w-4xl mx-auto px-6 text-center">
     <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">Get In Touch</p>
     <h2 class="text-3xl font-semibold text-white mb-6">We'd love to hear from you</h2>
     <p class="text-white/70 max-w-xl mx-auto mb-10">
-      Whether you want to partner with us, support the Education Center, or simply learn more
-      about our work, reach out any time.
+      Got a question, want to partner with us, or just curious about the Education Center? Reach
+      out any time. We read every message ourselves.
     </p>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-8 mb-10">
       <div class="flex items-center gap-3">
         <span class="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
           <i data-lucide="mail" class="w-4 h-4 text-brand-400"></i>
@@ -228,23 +283,69 @@
         <span class="text-white text-sm">+92 308 4040671</span>
       </div>
     </div>
+
+    <a href="contact.html" class="inline-flex items-center gap-2 text-brand-400 font-medium hover:text-brand-300 transition-colors">
+      Send us a message
+      <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    </a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-slate-900 border-t border-white/10 py-8">
-  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-white/70 text-sm">&copy; 2026 Universal Truth Ministry. All rights reserved.</p>
-    <a href="https://www.linkedin.com/company/universal-truth-ministry/" target="_blank" rel="noopener"
-       class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-400 transition-colors">
-      <i data-lucide="linkedin" class="w-4 h-4"></i>
-    </a>
+<footer class="bg-slate-900 border-t border-white/10 pt-10 pb-8">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex justify-center mb-8">
+      <div class="w-28 border-t-2 border-dashed border-brand-400/40"></div>
+    </div>
+    <p class="text-center text-white/50 text-xs uppercase tracking-[0.25em] mb-8">
+      Raising Christ-centered leaders who transform families and communities
+    </p>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-white/70 text-sm">&copy; 2026 Universal Truth Ministry. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="privacy.html" class="text-white/60 text-xs hover:text-brand-400 transition-colors">Privacy Policy</a>
+        <a href="safeguarding.html" class="text-white/60 text-xs hover:text-brand-400 transition-colors">Child Safeguarding</a>
+        <a href="https://www.linkedin.com/company/universal-truth-ministry/" target="_blank" rel="noopener" aria-label="Universal Truth Ministry on LinkedIn"
+           class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-400 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script>
   lucide.createIcons();
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  }
 </script>
 
+<script>
+  // Accessibility: keyboard, touch, and screen-reader support for the header menus.
+  (function () {
+    var mb = document.getElementById('mobile-menu-btn');
+    var mm = document.getElementById('mobile-menu');
+    if (mb && mm) {
+      mb.addEventListener('click', function () {
+        mb.setAttribute('aria-expanded', mm.classList.contains('hidden') ? 'false' : 'true');
+      });
+    }
+    document.querySelectorAll('header nav .relative.group').forEach(function (dd) {
+      var btn = dd.querySelector('button');
+      if (!btn) return;
+      var set = function (open) { btn.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+      dd.addEventListener('mouseenter', function () { set(true); });
+      dd.addEventListener('mouseleave', function () { if (!dd.contains(document.activeElement)) set(false); });
+      dd.addEventListener('focusin', function () { set(true); });
+      dd.addEventListener('focusout', function (e) { if (!dd.contains(e.relatedTarget)) set(false); });
+      dd.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { set(false); if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); }
+      });
+    });
+  })();
+</script>
 </body>
 </html>

@@ -1,94 +1,86 @@
 # Content Improvement To-Do — Universal Truth Ministry Website
 
 > **Geographic focus (keep consistent across all content):** Universal Truth Ministry serves
-> **South Punjab, Pakistan**, and **started in Layyah**. Use this framing site-wide — the mission
-> currently says the vaguer "Pakistan's remote and neglected areas," which can be sharpened to
-> "South Punjab" where appropriate. Layyah is the starting point / first location, not the whole
-> scope.
+> **South Punjab, Pakistan**, and **started in Layyah**. Layyah is the starting point / first
+> location, not the whole scope.
+>
+> **Registration status:** Never mention legal registration, SECP, or Section 42 status on any
+> donor-facing page. It reads as a reason to wait, not a reason to help.
 
-
-This is a review of the *words and substance* across the site (not design). The build looks good;
-what will make it credible to donors, partners, and SECP/grant reviewers is stronger, more
-specific, and more truthful content. Items are grouped by priority.
-
-Most of these need **information only you have** — I can write/wire all of it, but I'll need the
-real facts from you first (marked "needs your input").
+This is a refresh of the original review, updated after a lot of the earlier list got done. Items
+are grouped by priority. Most remaining items need **information only the founder has** — Claude
+can write/wire all of it once given the real facts.
 
 ---
 
-## Priority 1 — Blocking a real launch
+## Done since the last review
 
-**1. Replace the Our Story placeholder** *(needs your input)*
-`our-story.html` still has draft text with a placeholder note. It reads generic ("began with a
-simple conviction"). Donors connect with specifics: What year did it start? What did you personally
-see that made you act? Who were the first children? Why Layyah? One real, concrete moment beats a
-paragraph of general mission language.
-
-**2. Set up the contact form** *(DONE)*
-`contact.html` now uses Web3Forms with the ministry's access key already in place (messages go to
-zuhaib.asgher@universaltruthministry.org). The form is live as soon as the site is published, no
-extra activation step needed.
-
-**3. Add real Stories of Change** *(needs your input + consent)*
-`impact.html` has an empty "Coming Soon" placeholder here. One or two short student stories
-(first name or pseudonym only, guardian consent required) are the most persuasive content a charity
-site can have. Even one would transform the page.
-
----
-
-## Priority 2 — Credibility & trust
-
-**4. Strengthen the Impact numbers** *(needs your input)*
-Current stats are 40+ students, 1 center, 6 core values. "6 core values" isn't really impact.
-Replace with verifiable figures: year founded, how long running, number of boys/girls, age range,
-subjects taught, weekly attendance, books distributed. Only what you can back up.
-
-**5. Add a Statement of Faith**
-As a Christian ministry, the site lists values but never states what it believes. Viva uses the
-Nicene Creed. A short, clear statement of faith reassures Christian donors and partner churches.
-I can draft a standard evangelical one for you to approve/edit.
-
-**6. Add "How your donation helps"** *(needs your input)*
-`donate.html` says giving isn't online yet, but never says what money does. Concrete tangibles make
-giving feel real: e.g. "£X supports one student for a month," "£Y covers books for the year," rent
-and teacher costs. Needs your real cost figures.
-
-**7. Expand the founder bio** *(needs your input)*
-`our-team.html` bio is two thin sentences. Since you are currently the whole organization, a fuller
-bio (background, what led you here, any relevant experience, a personal line) builds real trust.
-
-**8. Get Privacy & Safeguarding out of draft**
-Both are marked "draft". For a children's ministry, a finalized Child Safeguarding statement matters
-for trust and for grant eligibility. I can firm up the wording; you confirm it reflects your actual
-practice, then we drop the draft banners.
+- Our Story rewritten with real, specific history (the family home, the 2016 move to Lahore, the
+  2024 reopening, the rental-income backstory)
+- Contact form live (Web3Forms)
+- Real student numbers everywhere: 35 students, 15 boys / 20 girls, ages 5–16
+- Founder bio expanded on Our Team (education, career, calling, family)
+- Child Safeguarding policy reads as a real, finalized policy (no "draft" language)
+- Per-page meta descriptions are unique and specific, not generic
+- Homepage hero headline reworked
+- "Why South Punjab" section added to Vision & Mission (population, poverty stats, sourced)
+- Registration-status wording removed from every donor-facing page (Donate, Get Involved, Impact,
+  Privacy)
+- Donate page now shows real bank transfer details (account, IBAN, SWIFT/BIC) instead of routing
+  everyone through a contact form, and speaks to the whole ministry rather than one project
+- Google Analytics installed site-wide
+- Em dashes removed site-wide
 
 ---
 
-## Priority 3 — Polish & reach
+## Priority 1 — Matters most for real donor/partner outreach
 
-**9. Rework the homepage hero headline**
-Current headline is close to Viva's borrowed phrasing and generic. A line specific to UMT — naming
-what you actually do in Layyah — would be stronger and more honest.
+**1. Real annual budget and cost per child** *(needs your input)*
+Nothing on the site says what it costs to run the Education Center for a year, or per child. Your
+own partner-search notes flagged this as the single most important missing number — most donors and
+church missions committees want this before they commit to anything.
 
-**10. Add a rough timeline to future programs**
-`programs.html` lists planned programs with no sense of when. Adding your Phase A/B/C strategy
-framing (Year 1, Years 2–3, Years 3–5) makes the roadmap feel real rather than wishful.
+**2. Real Stories of Change** *(needs your input + consent)*
+`impact.html` still has a "coming soon" placeholder. Even one short, consented story (first name
+only) would do more than any statistic on the page.
 
-**11. Write the first real blog post** *(needs your input)*
-The Blog only has the example/template post. One genuine update — a recent day at the Center, or a
-short intro to the ministry — means the Blog link doesn't lead to placeholder content.
+**3. Teacher profiles** *(needs your input)*
+Moon Stephen and Sarafeen Stephen have a name and a title on Our Team, nothing else. A few
+sentences each on who they are and why they teach would show this is a real staffed program.
 
-**12. Tighten per-page meta descriptions & titles (SEO)**
-Several pages share thin, generic descriptions. Unique, keyword-aware ones (e.g. "Christian
-children's education center in Layyah, Pakistan") improve how the site shows up in search results
-and shared links. I can do this without needing input from you.
+**4. Statement of Faith**
+Core Values lists what the ministry values, but never states what it believes theologically.
+Christian donors and partner churches often look for this specifically. Claude can draft a standard
+one for you to review and edit.
 
 ---
 
-## Quick reference: what I need from you vs. what I can do alone
+## Priority 2 — Strengthens the case
 
-**Needs your input/facts:** 1, 3, 4, 6, 7, 11 — and consent confirmation for 3. (Item 2 is done.)
-**I can draft/do now, you just review:** 5, 8, 9, 10, 12.
+**5. Visible program roadmap**
+You already have a clear internal plan (Phase A this year, Phase B years 2–3, Phase C years 3–5),
+but `programs.html` just says future programs are "planned, not yet active" with no sense of when.
+Showing the phased timeline would make it feel like a real plan.
 
-Tell me which ones you want to start with, or hand me the facts for any Priority 1 item and I'll
-wire it in right away.
+**6. First real blog post** *(needs your input)*
+The blog only has the placeholder template. One honest post — a normal day at the Center, or the
+rental-income story — gives people a reason to check back.
+
+**7. A few unverified facts** *(needs your input)*
+Your own partner-search notes flagged these as details real partners ask about: parents'
+occupations, the language of teaching, whether the space is a rented room or the family's own
+house, and whether uniforms, water, or snacks are actually provided. Worth having real answers
+ready even before they go on the site.
+
+---
+
+## Not a website task, tracked separately
+
+Legal registration, governance, and policy documents (SECP, MOA/AOA, board structure) are tracked
+in the main project context doc, not here. This list is only what's left on
+universaltruthministry.org itself.
+
+## Quick reference: what needs your input vs. what Claude can draft alone
+
+**Needs your input/facts:** 1, 2, 3, 6, 7 — and consent confirmation for 2.
+**Claude can draft now, you review:** 4, 5.

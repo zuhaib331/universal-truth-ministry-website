@@ -22,3 +22,6 @@
 /* Photo page headers (all inner pages) */
 .photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
 @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:inline-block{display:inline-block}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.5fr}}
+/* Lighter photo shade + homepage photo strip (19 Oct 2026) */
+.photo-shade{background:radial-gradient(ellipse 65% 60% at 50% 50%,rgba(15,23,42,.6) 0%,rgba(15,23,42,.36) 60%,rgba(15,23,42,.22) 100%),linear-gradient(to top,rgba(15,23,42,.6) 0%,rgba(15,23,42,0) 30%)}.photo-shade~div h1,.photo-shade~div p{text-shadow:0 1px 3px rgba(15,23,42,.7),0 2px 18px rgba(15,23,42,.75)}.photo-shade~div p.text-brand-400,.photo-shade~div .text-brand-400{color:#fcd34d}
+.photo-strip{display:grid;grid-template-columns:1fr;gap:1.5rem}@media (min-width:768px){.photo-strip{grid-template-columns:repeat(3,minmax(0,1fr))}}

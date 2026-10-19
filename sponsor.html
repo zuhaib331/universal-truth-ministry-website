@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css?v=20261019d" />
+<link rel="stylesheet" href="styles.css?v=20261019e" />
 <script src="lucide.min.js"></script>
 
 <style>
@@ -58,6 +58,8 @@
   /* Photo page header: taller on wide screens so the photo is not over-zoomed. Kept in the page
      (as well as styles.css) so it works even if a browser has an old stylesheet saved. */
   .photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
+  /* Lighter photo shade (Oct 2026): darker only behind the text, so the children's faces and colours show. */
+  .photo-shade{background:radial-gradient(ellipse 65% 60% at 50% 50%,rgba(15,23,42,.6) 0%,rgba(15,23,42,.36) 60%,rgba(15,23,42,.22) 100%),linear-gradient(to top,rgba(15,23,42,.6) 0%,rgba(15,23,42,0) 30%)}.photo-shade~div h1,.photo-shade~div p{text-shadow:0 1px 3px rgba(15,23,42,.7),0 2px 18px rgba(15,23,42,.75)}.photo-shade~div p.text-brand-400,.photo-shade~div .text-brand-400{color:#fcd34d}
 </style>
 </head>
 
@@ -137,8 +139,7 @@
 <!-- PAGE HEADER -->
 <section class="relative bg-slate-900 photo-header overflow-hidden">
   <img src="images/education-center-teaching.jpg" alt="Children learning at the Universal Truth Education Center in Layyah" class="absolute inset-0 w-full h-full object-cover" style="object-position: center 60%" />
-  <div class="absolute inset-0 bg-slate-900/60"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+  <div class="absolute inset-0 photo-shade"></div>
   <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
     <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">Get Involved</p>
     <h1 class="text-white font-semibold text-4xl md:text-5xl mb-6">Sponsor a Child</h1>

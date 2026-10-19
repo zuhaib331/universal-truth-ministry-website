@@ -235,3 +235,28 @@ the plain dark-gradient and cream headers. Pattern:
 **Cache rule:** every page now loads `styles.css?v=20261019d`. Whenever styles.css changes, change
 this number on every page; whenever sponsor-children.js changes, change its `?v=` number in
 sponsor.html and impact.html.
+
+---
+
+## Update, 19 October 2026 (later): lighter photo shade + homepage photo strip
+
+The founder agreed the site felt quiet and colourless: the dark 60–75% overlay was hiding the
+children's faces and bright clothes. **The two overlay divs are replaced by one:**
+
+```html
+<div class="absolute inset-0 photo-shade"></div>
+```
+
+- `.photo-shade` is a radial gradient: about 60% navy in the centre (behind the text), fading to
+  about 22% at the edges, plus a soft 60% fade at the very bottom. Faces at the sides now show.
+- Text on a photo gets a text-shadow, and gold eyebrow labels on a photo become a brighter gold
+  (`#fcd34d`) so they stay readable. Both rules apply automatically to any `div` after `.photo-shade`.
+- Used on the homepage hero and all 15 inner photo headers. Do not go back to `bg-slate-900/60`.
+- **Homepage photo strip** ("Inside the Education Center"), after the "For ten years" paragraph:
+  three photos (group, teaching, books) in a `.photo-strip` grid (1 column on phones, 3 from 768 px),
+  `h-72 rounded-xl`, with short `text-sm text-slate-500` captions. Only Center group photos, never a
+  sponsored child's own photo.
+- `.photo-shade` rules are in styles.css AND in each page's `<style>` block; `.photo-strip` is in
+  styles.css and index.html.
+
+**Cache rule:** pages now load `styles.css?v=20261019e`.

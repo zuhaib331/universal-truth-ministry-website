@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css?v=20261019d" />
+<link rel="stylesheet" href="styles.css?v=20261019e" />
 <script src="lucide.min.js"></script>
 
 <style>
@@ -44,6 +44,9 @@
   /* Photo page header: taller on wide screens so the photo is not over-zoomed. Kept in the page
      (as well as styles.css) so it works even if a browser has an old stylesheet saved. */
   .photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
+  /* Lighter photo shade (Oct 2026): darker only behind the text, so the children's faces and colours show. */
+  .photo-shade{background:radial-gradient(ellipse 65% 60% at 50% 50%,rgba(15,23,42,.6) 0%,rgba(15,23,42,.36) 60%,rgba(15,23,42,.22) 100%),linear-gradient(to top,rgba(15,23,42,.6) 0%,rgba(15,23,42,0) 30%)}.photo-shade~div h1,.photo-shade~div p{text-shadow:0 1px 3px rgba(15,23,42,.7),0 2px 18px rgba(15,23,42,.75)}.photo-shade~div p.text-brand-400,.photo-shade~div .text-brand-400{color:#fcd34d}
+  .photo-strip{display:grid;grid-template-columns:1fr;gap:1.5rem}@media (min-width:768px){.photo-strip{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
 </head>
 
@@ -127,8 +130,7 @@
     alt="Students sitting together during a lesson at the Universal Truth Education Center in Layyah"
     class="absolute inset-0 w-full h-full object-cover"
   />
-  <div class="absolute inset-0 bg-slate-900/75"></div>
-  <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+  <div class="absolute inset-0 photo-shade"></div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 text-center">
     <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-6">Educating Christian Children in South Punjab, Pakistan</p>
@@ -217,6 +219,28 @@
       For ten years we opened our doors to the children of our community. Since January 2024,
       that calling has become a ministry, still young, but growing stronger by the day.
     </p>
+  </div>
+
+  <!-- INSIDE THE CENTER: photo strip, so visitors see the children before the dark sections -->
+  <div class="max-w-6xl mx-auto px-6 pt-16">
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-8 text-center">Inside the Education Center</p>
+    <div class="photo-strip">
+      <figure>
+        <img loading="lazy" decoding="async" src="images/education-center-group.jpg" alt="Children of the Universal Truth Education Center standing together in Layyah"
+          class="w-full h-72 object-cover rounded-xl" style="object-position:center 35%" />
+        <figcaption class="text-sm text-slate-500 mt-3 leading-relaxed">35 children, ages 4 to 16, learn at the Center today.</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" decoding="async" src="images/education-center-teaching.jpg" alt="Children sitting on the floor during a lesson at the Education Center"
+          class="w-full h-72 object-cover rounded-xl" style="object-position:center 60%" />
+        <figcaption class="text-sm text-slate-500 mt-3 leading-relaxed">Lessons at the Center, alongside the government school they attend by day.</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" decoding="async" src="images/education-center-books.jpg" alt="Students holding their books at the Universal Truth Education Center"
+          class="w-full h-72 object-cover rounded-xl" style="object-position:center 30%" />
+        <figcaption class="text-sm text-slate-500 mt-3 leading-relaxed">Twenty of our students now read the Bible every day.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 

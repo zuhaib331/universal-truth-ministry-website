@@ -1,2 +1,4 @@
 .DS_Store
 Thumbs.db
+# Claude working files (screenshots, previews). Never publish.
+Claude outputs/

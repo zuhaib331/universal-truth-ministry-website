@@ -6,4 +6,12 @@
 .font-normal{font-weight:400}
 .left-4{left:1rem}
 .px-3{padding-left:.75rem;padding-right:.75rem}
+.bottom-4{bottom:1rem}
+.max-w-md{max-width:28rem}
+.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}
+/* Child photos on the Sponsor page: blurred until the visitor gives an email */
+.photo-blurred{filter:blur(18px);transform:scale(1.2)}
+.photo-fade{transition:filter .9s ease,transform .9s ease}
+.photo-veil{background-color:rgba(15,23,42,.15);cursor:pointer}
+.photo-veil:hover{background-color:rgba(15,23,42,.3)}
 @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:inline-block{display:inline-block}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.5fr}}

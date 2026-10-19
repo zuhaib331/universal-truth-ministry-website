@@ -466,14 +466,65 @@
   </div>
 </footer>
 
+<!-- STORY GATE: asks for name and email before showing a child's photo and full story -->
+<div id="story-gate" class="hidden fixed inset-0 z-[60] bg-slate-900/60 flex items-center justify-center p-6" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="relative bg-white rounded-2xl p-8 shadow-2xl w-full max-w-md">
+    <button type="button" id="gate-close" class="absolute top-4 right-4 text-slate-500 hover:text-slate-900 transition-colors" aria-label="Close">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center mb-5">
+      <i data-lucide="book-open" class="w-5 h-5 text-brand-500"></i>
+    </div>
+    <h3 id="gate-title" class="text-2xl font-semibold text-slate-900 mb-2">Read this child's story</h3>
+    <p class="text-sm leading-relaxed mb-6">
+      We share each child's photo and full story with people who introduce themselves. Enter your
+      name and email once, and you can read every child's story.
+    </p>
+    <form id="gate-form" class="space-y-4">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" />
+      <div>
+        <label for="gate-name" class="block text-sm font-medium text-slate-900 mb-2">Your name</label>
+        <input type="text" id="gate-name" name="name" required autocomplete="name"
+          class="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400" />
+      </div>
+      <div>
+        <label for="gate-email" class="block text-sm font-medium text-slate-900 mb-2">Your email</label>
+        <input type="email" id="gate-email" name="email" required autocomplete="email"
+          class="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400" />
+      </div>
+      <button type="submit" id="gate-submit"
+        class="w-full px-8 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">
+        Show the story
+      </button>
+      <p class="text-xs text-slate-500 leading-relaxed">
+        We only use your email to write to you about the children and the Center, and we never
+        sell it. See our <a href="privacy.html" class="text-brand-500 hover:text-brand-400">Privacy Policy</a>.
+      </p>
+    </form>
+  </div>
+</div>
+
 <script src="sponsor-children.js"></script>
 <script>
   // --- Build the child cards from sponsor-children.js ---
+  // Each card shows the name, age, class, dream and the first sentence of the story to everyone.
+  // The photo, full story and other details open after the visitor gives a name and email.
+  // Every opened story sends an email to the Center (Web3Forms), so you can see who read which child.
+  // NOTE: this tracks interest only. Photo files are still public on the internet, so only use
+  // photos that follow the Child Safeguarding policy (from behind, at a distance, with consent).
   (function () {
     var list = (window.SPONSOR_CHILDREN || []).filter(function (c) { return c && c.name; });
     var grid = document.getElementById('children-grid');
     var empty = document.getElementById('children-empty');
     var select = document.getElementById('sp-child');
+    var ACCESS_KEY = '62a95d7a-bcba-4ca3-85ee-29527ba30346';
+    var STORE = 'utm_story_reader';
+
+    // The visitor's name, email and opened stories are remembered in their own browser only
+    function loadReader() { try { return JSON.parse(localStorage.getItem(STORE) || 'null'); } catch (e) { return null; } }
+    function saveReader() { try { localStorage.setItem(STORE, JSON.stringify(reader)); } catch (e) {} }
+    var reader = loadReader();
+    if (reader && !reader.opened) reader.opened = [];
 
     function el(tag, cls, text) {
       var e = document.createElement(tag);
@@ -481,35 +532,135 @@
       if (text != null) e.textContent = text;
       return e;
     }
+    function icon(name, cls) { var i = el('i', cls); i.setAttribute('data-lucide', name); return i; }
     function line(label, value) {
       var p = el('p', '');
       p.appendChild(el('span', 'font-medium text-slate-900', label + ' '));
       p.appendChild(document.createTextNode(value));
       return p;
     }
+    function teaser(text) {
+      var m = text.match(/^[^.!?]*[.!?]/);
+      var first = m ? m[0] : text;
+      return first.length < text.trim().length ? first + ' …' : first;
+    }
+    function isOpen(c) { return !!reader && reader.opened.indexOf(c.name) !== -1; }
+    var justOpened = null; // the card whose photo should play the unblur animation
 
-    if (!list.length) { empty.classList.remove('hidden'); return; }
+    // Tell the Center that someone opened a child's story
+    function notify(child, firstTime) {
+      var fd = new FormData();
+      fd.append('access_key', ACCESS_KEY);
+      fd.append('subject', (firstTime ? 'New story reader: ' : 'Another story opened: ') + child);
+      fd.append('from_name', 'Universal Truth Ministry Website');
+      fd.append('name', reader.name);
+      fd.append('email', reader.email);
+      fd.append('child', child);
+      fd.append('page', 'Sponsor a Child');
+      if (typeof gtag === 'function') gtag('event', 'child_story_opened');
+      return fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+        .then(function (r) { return r.json(); })
+        .catch(function () { return { success: false }; });
+    }
+    function markOpen(c) {
+      if (reader.opened.indexOf(c.name) === -1) reader.opened.push(c.name);
+      saveReader();
+    }
 
-    // Children still waiting for a sponsor are shown first
-    list.sort(function (a, b) { return (a.sponsored ? 1 : 0) - (b.sponsored ? 1 : 0); });
+    // --- Story gate (pop-up) ---
+    var gate = document.getElementById('story-gate');
+    var gateForm = document.getElementById('gate-form');
+    var gateTitle = document.getElementById('gate-title');
+    var gateSubmit = document.getElementById('gate-submit');
+    var waiting = null;
+    function showGate(c) {
+      waiting = c;
+      gateTitle.textContent = 'Read ' + c.name + '’s story';
+      gate.classList.remove('hidden');
+      document.getElementById('gate-name').focus();
+    }
+    function hideGate() { gate.classList.add('hidden'); waiting = null; }
+    document.getElementById('gate-close').addEventListener('click', hideGate);
+    gate.addEventListener('click', function (e) { if (e.target === gate) hideGate(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !gate.classList.contains('hidden')) hideGate(); });
+    gateForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (gateForm.botcheck.checked || !waiting) return;
+      var c = waiting;
+      reader = { name: gateForm.name.value.trim(), email: gateForm.email.value.trim(), opened: [] };
+      gateSubmit.textContent = 'Opening...';
+      gateSubmit.disabled = true;
+      // The story opens even if the email cannot be sent, so the visitor is never stuck
+      notify(c.name, true).then(function () {
+        markOpen(c);
+        gateSubmit.textContent = 'Show the story';
+        gateSubmit.disabled = false;
+        hideGate();
+        justOpened = c.name;
+        render();
+        justOpened = null;
+      });
+    });
 
-    list.forEach(function (c) {
-      var card = el('article', 'rounded-2xl overflow-hidden bg-white shadow-xl flex flex-col');
+    function openStory(c) {
+      if (!reader) { showGate(c); return; }
+      notify(c.name, false);
+      markOpen(c);
+      justOpened = c.name;
+      render();
+      justOpened = null;
+    }
 
-      var photo = el('div', 'relative h-64 bg-slate-100');
-      if (c.photo) {
-        var img = el('img', 'w-full h-full object-cover');
-        img.src = c.photo; img.alt = 'Photo of ' + c.name; img.loading = 'lazy';
+    // --- One card ---
+    function card(c) {
+      var open = isOpen(c);
+      var a = el('article', 'rounded-2xl overflow-hidden bg-white shadow-xl flex flex-col');
+
+      var photo = el('div', 'relative h-64 bg-slate-100 overflow-hidden');
+      if (open && c.photo) {
+        // Sharp photo: only downloaded after the visitor has given name and email
+        var img = el('img', 'w-full h-full object-cover photo-fade');
+        img.alt = 'Photo of ' + c.name;
+        if (c.name === justOpened) {
+          // The story just opened: start blurred, then clear the blur once the photo has loaded
+          img.classList.add('photo-blurred');
+          img.addEventListener('load', function () {
+            requestAnimationFrame(function () { requestAnimationFrame(function () { img.classList.remove('photo-blurred'); }); });
+          });
+        }
+        img.style.objectPosition = c.photoPosition || 'center 30%';
+        img.src = c.photo;
         photo.appendChild(img);
+      } else if (c.photo && c.photoBlur) {
+        // Locked: show only the tiny blurred copy (no face can be recovered from it)
+        var bimg = el('img', 'w-full h-full object-cover photo-blurred');
+        bimg.style.objectPosition = c.photoPosition || 'center 30%';
+        bimg.src = c.photoBlur; bimg.alt = '';
+        photo.appendChild(bimg);
+        var veil = el('button', 'absolute inset-0 w-full flex items-center justify-center photo-veil');
+        veil.type = 'button';
+        veil.setAttribute('aria-label', 'See ' + c.name + '’s photo and story');
+        var pill = el('span', 'inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-slate-900 text-sm font-medium shadow-xl');
+        pill.appendChild(icon('lock', 'w-4 h-4 text-brand-500'));
+        pill.appendChild(document.createTextNode('See ' + c.name + '’s photo'));
+        veil.appendChild(pill);
+        veil.addEventListener('click', function () { openStory(c); });
+        photo.appendChild(veil);
       } else {
         var ph = el('div', 'w-full h-full flex items-center justify-center bg-brand-50');
         ph.appendChild(el('span', 'text-5xl font-semibold text-brand-500', c.name.charAt(0)));
         photo.appendChild(ph);
+        if (!open && c.photo) {
+          var chip = el('span', 'absolute bottom-4 left-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-slate-700 text-xs font-medium shadow-xl');
+          chip.appendChild(icon('lock', 'w-3.5 h-3.5 text-brand-500'));
+          chip.appendChild(document.createTextNode('Photo with the full story'));
+          photo.appendChild(chip);
+        }
       }
       if (c.sponsored) {
         photo.appendChild(el('span', 'absolute top-4 left-4 px-3 py-1 rounded-full bg-white text-brand-500 text-xs font-semibold shadow-xl', 'Sponsored, thank you!'));
       }
-      card.appendChild(photo);
+      a.appendChild(photo);
 
       var body = el('div', 'p-6 flex flex-col flex-1');
       body.appendChild(el('h3', 'font-semibold text-lg text-slate-900', c.name));
@@ -517,34 +668,78 @@
       if (c.age) meta.push('Age ' + c.age);
       if (c.grade) meta.push(c.grade);
       if (meta.length) body.appendChild(el('p', 'text-sm font-medium text-brand-500 mb-4', meta.join(' · ')));
-      if (c.story) body.appendChild(el('p', 'text-sm leading-relaxed mb-4', c.story));
+      if (c.story) body.appendChild(el('p', 'text-sm leading-relaxed mb-4', open ? c.story : teaser(c.story)));
 
       var facts = el('div', 'text-sm space-y-1 mb-5');
-      if (c.loves) facts.appendChild(line('Loves:', c.loves));
       if (c.dream) facts.appendChild(line('Dreams of becoming:', c.dream));
-      if (c.bibleStory) facts.appendChild(line('Favourite Bible story:', c.bibleStory));
+      if (open && c.loves) facts.appendChild(line('Loves:', c.loves));
+      if (open && c.bibleStory) facts.appendChild(line('Favourite Bible story:', c.bibleStory));
       if (facts.childNodes.length) body.appendChild(facts);
 
-      if (c.quote) {
+      if (open && c.quote) {
         body.appendChild(el('p', 'border-l-4 border-brand-400 px-4 text-sm text-slate-700 leading-relaxed mb-6', '“' + c.quote + '”'));
       }
 
-      var spacer = el('div', 'flex-1'); body.appendChild(spacer);
+      body.appendChild(el('div', 'flex-1'));
       if (c.sponsored) {
         body.appendChild(el('p', 'w-full px-5 py-3 rounded-full bg-slate-100 text-slate-600 text-sm font-medium text-center', c.name + ' has a sponsor'));
-      } else {
-        var btn = el('a', 'block w-full px-5 py-3 rounded-full bg-brand-400 text-white text-sm font-medium text-center hover:bg-brand-500 transition-colors', 'Sponsor ' + c.name + '’s place');
-        btn.href = '#start';
-        btn.addEventListener('click', function () { if (select) select.value = c.name; });
-        body.appendChild(btn);
-
-        var opt = document.createElement('option');
-        opt.value = c.name; opt.textContent = c.name;
-        select.appendChild(opt);
+        if (!open) {
+          var readS = el('button', 'w-full mt-3 text-sm font-medium text-brand-500 hover:text-brand-400 transition-colors', 'Read ' + c.name + '’s story');
+          readS.type = 'button';
+          readS.addEventListener('click', function () { openStory(c); });
+          body.appendChild(readS);
+        }
+        return finish(a, body);
       }
-      card.appendChild(body);
-      grid.appendChild(card);
-    });
+
+      var sponsorBtn = el('a', '', 'Sponsor ' + c.name + '’s place');
+      sponsorBtn.href = '#start';
+      sponsorBtn.addEventListener('click', function () {
+        if (select) select.value = c.name;
+        if (reader) {
+          var n = document.getElementById('sp-name'), m = document.getElementById('sp-email');
+          if (n && !n.value) n.value = reader.name;
+          if (m && !m.value) m.value = reader.email;
+        }
+      });
+
+      if (open) {
+        sponsorBtn.className = 'block w-full px-5 py-3 rounded-full bg-brand-400 text-white text-sm font-medium text-center hover:bg-brand-500 transition-colors';
+        body.appendChild(sponsorBtn);
+      } else {
+        var readBtn = el('button', 'w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors');
+        readBtn.type = 'button';
+        readBtn.appendChild(icon('book-open', 'w-4 h-4'));
+        readBtn.appendChild(document.createTextNode('Read ' + c.name + '’s story'));
+        readBtn.addEventListener('click', function () { openStory(c); });
+        body.appendChild(readBtn);
+        sponsorBtn.className = 'block w-full mt-3 text-sm font-medium text-center text-brand-500 hover:text-brand-400 transition-colors';
+        body.appendChild(sponsorBtn);
+      }
+      return finish(a, body);
+    }
+    function finish(a, body) { a.appendChild(body); return a; }
+
+    // --- All cards ---
+    function render() {
+      grid.innerHTML = '';
+      if (select) { while (select.options.length > 1) select.remove(1); }
+      list.forEach(function (c) {
+        grid.appendChild(card(c));
+        if (!c.sponsored && select) {
+          var opt = document.createElement('option');
+          opt.value = c.name; opt.textContent = c.name;
+          select.appendChild(opt);
+        }
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    if (!list.length) { empty.classList.remove('hidden'); return; }
+
+    // Children still waiting for a sponsor are shown first
+    list.sort(function (a, b) { return (a.sponsored ? 1 : 0) - (b.sponsored ? 1 : 0); });
+    render();
   })();
 </script>
 <script>

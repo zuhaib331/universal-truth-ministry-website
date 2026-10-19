@@ -50,6 +50,20 @@ window.SPONSOR_CHILDREN = [
     bibleStory: "David and Goliath, because David stood up when Goliath mocked God",
     quote: "The teachers listen to me, understand my feelings, and love me.",
     sponsored: false
+  },
+
+  {
+    name: "Anthony",
+    age: 14,
+    grade: "Class 9",
+    photo: "images/children/anthony.jpg",
+    photoBlur: "images/children/anthony-blur.jpg",
+    story: "Anthony is one of three children in his family, and all three come to the Education Center. His father works as a cleaner at a hospital and is the only one earning for the family. Anthony loves his family and feels the pressure to leave school and start working to help them, but he wants to keep studying. He is happy at the Center, where his teacher helps him so well with Biology, his favourite subject. Helping these children now can change the future of their whole family.",
+    loves: "Biology, his favourite subject",
+    dream: "A police officer, to serve his country as a Christian",
+    bibleStory: "Samson, because God made him strong, and he admires Samson's character",
+    quote: "",
+    sponsored: false
   }
 
 ];

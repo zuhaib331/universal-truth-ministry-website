@@ -35,11 +35,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20261019d" />
 <script src="lucide.min.js"></script>
 
 <style>
   h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
+
+  /* Photo page header: taller on wide screens so the photo is not over-zoomed. Kept in the page
+     (as well as styles.css) so it works even if a browser has an old stylesheet saved. */
+  .photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
 </style>
 </head>
 
@@ -137,7 +141,8 @@
       <div class="w-24 border-t-2 border-dashed border-brand-400/60"></div>
     </div>
     <div class="flex flex-wrap justify-center gap-4 mt-10">
-      <a href="donate.html" class="px-6 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
+      <a href="sponsor.html" class="px-6 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Sponsor a Child</a>
+      <a href="donate.html" class="px-6 py-3 rounded-full border border-white/30 text-white text-sm font-medium hover:border-brand-400 hover:text-brand-400 transition-colors">Donate</a>
       <a href="programs.html" class="px-6 py-3 rounded-full border border-white/30 text-white text-sm font-medium hover:border-brand-400 hover:text-brand-400 transition-colors">See Our Work</a>
     </div>
   </div>
@@ -246,12 +251,14 @@
     <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">Get Involved</p>
     <h2 class="text-3xl font-semibold text-slate-900 mb-6">Will you join us?</h2>
     <p class="leading-relaxed max-w-xl mx-auto mb-10">
-      Prayer, time, or giving: there are a few simple ways to stand with us, and each one helps.
+      Sponsoring a child, prayer, time, or giving: there are a few simple ways to stand with us,
+      and each one helps.
     </p>
     <div class="flex flex-wrap items-center justify-center gap-4">
       <a href="prayer.html" class="px-6 py-3 rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:border-brand-400 hover:text-brand-500 transition-colors">Pray</a>
       <a href="volunteer.html" class="px-6 py-3 rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:border-brand-400 hover:text-brand-500 transition-colors">Volunteer</a>
-      <a href="donate.html" class="px-6 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Give</a>
+      <a href="donate.html" class="px-6 py-3 rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:border-brand-400 hover:text-brand-500 transition-colors">Give</a>
+      <a href="sponsor.html" class="px-6 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Sponsor a Child</a>
     </div>
   </div>
 </section>

@@ -35,11 +35,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20261019d" />
 <script src="lucide.min.js"></script>
 
 <style>
   h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
+
+  /* Photo page header: taller on wide screens so the photo is not over-zoomed. Kept in the page
+     (as well as styles.css) so it works even if a browser has an old stylesheet saved. */
+  .photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
 </style>
 </head>
 
@@ -117,11 +121,14 @@
 </header>
 
 <!-- PAGE HEADER -->
-<section class="bg-gradient-to-br from-brand-50 via-white to-brand-50 py-20">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">Get In Touch</p>
-    <h1 class="text-slate-900 font-semibold text-4xl md:text-5xl">Contact Us</h1>
-    <p class="text-slate-600 max-w-2xl mx-auto mt-6">
+<section class="relative bg-slate-900 photo-header overflow-hidden">
+  <img src="images/classroom-writing.jpg" alt="Students writing during class at the Universal Truth Education Center" class="absolute inset-0 w-full h-full object-cover" style="object-position: center 70%" />
+  <div class="absolute inset-0 bg-slate-900/60"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+  <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">Get In Touch</p>
+    <h1 class="text-white font-semibold text-4xl md:text-5xl mb-6">Contact Us</h1>
+    <p class="text-white/80 leading-relaxed max-w-2xl mx-auto">
       Volunteering, prayer requests, giving, or general questions: we'd love to hear from you.
     </p>
   </div>

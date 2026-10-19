@@ -19,4 +19,6 @@
 .children-grid>article{width:100%}
 @media (min-width:640px){.children-grid>article{width:calc(50% - 1rem)}}
 @media (min-width:1024px){.children-grid>article{width:calc((100% - 4rem)/3)}}
+/* Photo page headers (all inner pages) */
+.photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
 @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:inline-block{display:inline-block}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.5fr}}

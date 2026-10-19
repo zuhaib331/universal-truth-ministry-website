@@ -199,3 +199,39 @@ Note: `h-96` is not yet in `styles.css` — use `h-80` (confirmed available) unt
    Tailwind build (even a simple one that regenerates `styles.css` from a class scan before each
    deploy) would remove this ceiling permanently. This is a separate, one-time technical task —
    happy to set it up if you want it.
+
+---
+
+## Update, 19 October 2026: photo headers on every inner page
+
+**Every inner page now opens with a photo header** (the homepage keeps its own hero). This replaces
+the plain dark-gradient and cream headers. Pattern:
+
+```html
+<section class="relative bg-slate-900 photo-header overflow-hidden">
+  <img src="images/education-center-group.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover" style="object-position: center 35%" />
+  <div class="absolute inset-0 bg-slate-900/60"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+  <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">About Us</p>
+    <h1 class="text-white font-semibold text-4xl md:text-5xl">Page Title</h1>
+  </div>
+</section>
+```
+
+- `.photo-header` = flex, vertically centred, `min-height: clamp(280px, 34vw, 540px)`, 4rem top and
+  bottom padding. It grows with the screen width, so the photo is not over-zoomed on wide screens
+  (the old fixed-padding header cut off heads at 1900 px). The rule is in styles.css AND in a
+  `<style>` block on every page, so an old saved stylesheet cannot break it.
+- **Always set `object-position` to where the faces are.** Anchors for the four Center photos:
+  education-center-group 35%, education-center-books 30%, classroom-writing 70%,
+  education-center-teaching 60%.
+- Photo per page: group (Our Story, Core Values, Donate), books (Our Team, Statement of Faith, Get
+  Involved), classroom-writing (What We Do, Impact, Volunteer, Contact), teaching (Sponsor, Vision &
+  Mission, Prayer, Privacy, Child Safeguarding). Privacy and Safeguarding use the teaching photo
+  because the children are seen from behind.
+- **Never use a sponsored child's photo in a header.** Child photos stay inside the email-gated cards.
+
+**Cache rule:** every page now loads `styles.css?v=20261019d`. Whenever styles.css changes, change
+this number on every page; whenever sponsor-children.js changes, change its `?v=` number in
+sponsor.html and impact.html.

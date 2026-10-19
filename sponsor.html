@@ -35,11 +35,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20261019b" />
 <script src="lucide.min.js"></script>
 
 <style>
   h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
+
+  /* Sponsor page only. Kept here (as well as in styles.css) so the child cards always
+     lay out correctly, even if a visitor's browser still has an old copy of styles.css. */
+  .children-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem}
+  .children-grid>article{width:100%}
+  @media (min-width:640px){.children-grid>article{width:calc(50% - 1rem)}}
+  @media (min-width:1024px){.children-grid>article{width:calc((100% - 4rem)/3)}}
+  .photo-blurred{filter:blur(18px);transform:scale(1.2)}
+  .photo-fade{transition:filter .9s ease,transform .9s ease}
+  .photo-veil{background-color:rgba(15,23,42,.15);cursor:pointer}
+  .photo-veil:hover{background-color:rgba(15,23,42,.3)}
+  .bottom-4{bottom:1rem}
+  .max-w-md{max-width:28rem}
+  .hover\:text-slate-900:hover{color:rgb(15 23 42)}
 </style>
 </head>
 
@@ -511,7 +525,7 @@
   </div>
 </div>
 
-<script src="sponsor-children.js"></script>
+<script src="sponsor-children.js?v=20261019b"></script>
 <script>
   // --- Build the child cards from sponsor-children.js ---
   // Each card shows the name, age, class, dream and the first sentence of the story to everyone.

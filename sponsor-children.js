@@ -64,6 +64,36 @@ window.SPONSOR_CHILDREN = [
     bibleStory: "Samson, because God made him strong, and he admires Samson's character",
     quote: "",
     sponsored: false
+  },
+
+  {
+    name: "Mishal",
+    age: 6,
+    grade: "",
+    photo: "images/children/mishal.jpg",
+    photoBlur: "images/children/mishal-blur.jpg",
+    photoPosition: "center top",
+    story: "Mishal loves her parents, and she loves numbers. She is happy at the Education Center because her teachers are so kind to her. Her little brother Rohan comes to the Center too.",
+    loves: "Math, her favourite subject",
+    dream: "A teacher",
+    bibleStory: "Moses",
+    quote: "",
+    sponsored: false
+  },
+
+  {
+    name: "Rohan",
+    age: 4,
+    grade: "",
+    photo: "images/children/rohan.jpg",
+    photoBlur: "images/children/rohan-blur.jpg",
+    photoPosition: "center top",
+    story: "Rohan loves his family. He is happy at the Education Center because his friends learn there too. His big sister Mishal comes to the Center with him.",
+    loves: "Counting, his favourite subject",
+    dream: "A lawyer",
+    bibleStory: "Zacchaeus, the man who climbed a tree to see Jesus",
+    quote: "",
+    sponsored: false
   }
 
 ];

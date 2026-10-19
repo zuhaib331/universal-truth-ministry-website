@@ -14,4 +14,9 @@
 .photo-fade{transition:filter .9s ease,transform .9s ease}
 .photo-veil{background-color:rgba(15,23,42,.15);cursor:pointer}
 .photo-veil:hover{background-color:rgba(15,23,42,.3)}
+/* Sponsor page child cards: wrap and centre, so a lonely last card sits in the middle */
+.children-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem}
+.children-grid>article{width:100%}
+@media (min-width:640px){.children-grid>article{width:calc(50% - 1rem)}}
+@media (min-width:1024px){.children-grid>article{width:calc((100% - 4rem)/3)}}
 @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:inline-block{display:inline-block}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.5fr}}

@@ -2,4 +2,8 @@
 /* Hand-added utilities (Sept 2026). These classes are not in the purged Tailwind build, so they are written here by hand. */
 .border-white\/30{border-color:hsla(0,0%,100%,.3)}
 .pt-6{padding-top:1.5rem}
+.cursor-pointer{cursor:pointer}
+.font-normal{font-weight:400}
+.left-4{left:1rem}
+.px-3{padding-left:.75rem;padding-right:.75rem}
 @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:inline-block{display:inline-block}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.5fr}}

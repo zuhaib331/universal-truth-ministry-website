@@ -2,4 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /blog/post-template.html
 
+# Child safeguarding: keep the children's photos and stories out of search results
+Disallow: /images/children/
+Disallow: /sponsor-children.js
+
 Sitemap: https://universaltruthministry.org/sitemap.xml

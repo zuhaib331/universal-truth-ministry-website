@@ -544,19 +544,20 @@
       var first = m ? m[0] : text;
       return first.length < text.trim().length ? first + ' …' : first;
     }
-    function isOpen(c) { return !!reader && reader.opened.indexOf(c.name) !== -1; }
+    function isOpen(c) { return !!reader; } // one email opens every child's story
     var justOpened = null; // the card whose photo should play the unblur animation
 
     // Tell the Center that someone opened a child's story
     function notify(child, firstTime) {
       var fd = new FormData();
       fd.append('access_key', ACCESS_KEY);
-      fd.append('subject', (firstTime ? 'New story reader: ' : 'Another story opened: ') + child);
+      fd.append('subject', 'New story reader (clicked ' + child + ' first)');
       fd.append('from_name', 'Universal Truth Ministry Website');
       fd.append('name', reader.name);
       fd.append('email', reader.email);
       fd.append('child', child);
       fd.append('page', 'Sponsor a Child');
+      fd.append('note', 'This visitor can now see every child\'s photo and story. The child named here is the one they clicked first.');
       if (typeof gtag === 'function') gtag('event', 'child_story_opened');
       return fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
         .then(function (r) { return r.json(); })
@@ -596,7 +597,7 @@
         gateSubmit.textContent = 'Show the story';
         gateSubmit.disabled = false;
         hideGate();
-        justOpened = c.name;
+        justOpened = '*';
         render();
         justOpened = null;
       });
@@ -621,7 +622,7 @@
         // Sharp photo: only downloaded after the visitor has given name and email
         var img = el('img', 'w-full h-full object-cover photo-fade');
         img.alt = 'Photo of ' + c.name;
-        if (c.name === justOpened) {
+        if (justOpened === '*' || c.name === justOpened) {
           // The story just opened: start blurred, then clear the blur once the photo has loaded
           img.classList.add('photo-blurred');
           img.addEventListener('load', function () {

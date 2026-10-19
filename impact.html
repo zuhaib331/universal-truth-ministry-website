@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20261019b" />
 <script src="lucide.min.js"></script>
 
 <style>
@@ -127,41 +127,75 @@
 
 <!-- STATS -->
 <section class="py-24">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center mb-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-14 text-center mb-16">
       <div>
         <p class="text-5xl font-semibold text-brand-500 mb-2">35</p>
-        <p class="text-sm text-slate-600">Christian children from families with limited financial and educational resources currently receiving education (15 boys, 20 girls, ages 5&ndash;16)</p>
-      </div>
-      <div>
-        <p class="text-5xl font-semibold text-brand-500 mb-2">1</p>
-        <p class="text-sm text-slate-600">Education Center currently running, in Layyah, South Punjab, Pakistan</p>
+        <p class="text-sm text-slate-600">Christian children from families with limited financial and educational resources currently learning at the Center (15 boys, 20 girls, ages 5&ndash;16)</p>
       </div>
       <div>
         <p class="text-5xl font-semibold text-brand-500 mb-2">6</p>
-        <p class="text-sm text-slate-600">Core values guiding every program we run</p>
+        <p class="text-sm text-slate-600">Classes every week at the Universal Truth Education Center in Layyah</p>
+      </div>
+      <div>
+        <p class="text-5xl font-semibold text-brand-500 mb-2">2</p>
+        <p class="text-sm text-slate-600">Teachers from the local Christian community, who know these families</p>
+      </div>
+      <div>
+        <p class="text-5xl font-semibold text-brand-500 mb-2">20</p>
+        <p class="text-sm text-slate-600">Students from Class 5 to Class 10 who now read the Bible every day</p>
       </div>
     </div>
 
-    <div class="max-w-2xl mx-auto text-center bg-slate-50 rounded-xl p-8">
-      <p class="text-sm leading-relaxed text-slate-600">
-        We'd rather show you real numbers than impressive-sounding ones. As we build better ways to
-        track how students are actually doing (attendance, progress, what families tell us), we'll
-        add more here. Any stories we share will only be with a parent or guardian's full consent.
-      </p>
+    <div class="max-w-2xl mx-auto rounded-2xl bg-slate-50 border-l-4 border-brand-400 p-8 shadow-xl mb-12">
+      <div class="flex items-start gap-5">
+        <div class="w-12 h-12 rounded-full bg-brand-400/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="book-open" class="w-5 h-5 text-brand-500"></i>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold text-slate-900 mb-2">Reading the Bible, every day</h2>
+          <p class="text-sm leading-relaxed text-slate-600">
+            Twenty of our students, from Class 5 to Class 10, have built the habit of reading the
+            Bible every day. Every Monday, they take a Bible reading test.
+          </p>
+        </div>
+      </div>
     </div>
+
+    <p class="max-w-2xl mx-auto text-center text-sm leading-relaxed text-slate-500">
+      These are real numbers, counted in October 2026, not estimates. As we build better ways to
+      track attendance and progress, we will add more here. Every child's story on this website is
+      shared with a parent's written permission.
+    </p>
   </div>
 </section>
 
-<!-- STORIES OF CHANGE section hidden until a real, consented student story is ready to add. -->
+<!-- THE CHILDREN BEHIND THE NUMBERS (filled in from sponsor-children.js) -->
+<section id="impact-children-section" class="py-20 bg-slate-50">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-500 mb-4">Behind the Numbers</p>
+      <h2 class="text-3xl font-semibold text-slate-900 mb-4">Meet some of our children</h2>
+      <p class="leading-relaxed max-w-2xl mx-auto">
+        Every number on this page is a real child. These children are waiting for a sponsor. Read
+        their stories on our Sponsor a Child page.
+      </p>
+    </div>
+    <div id="impact-children" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+    <div class="text-center mt-10">
+      <a href="sponsor.html#children" class="inline-block px-8 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Meet the children</a>
+    </div>
+  </div>
+</section>
 
 <!-- CTA -->
 <section class="py-20">
   <div class="max-w-3xl mx-auto px-6 text-center">
     <h2 class="text-2xl font-semibold text-slate-900 mb-4">Help us grow this impact further</h2>
+    <p class="leading-relaxed mb-8">About US$38 a month gives one child a full year at the Education Center.</p>
     <div class="flex flex-wrap items-center justify-center gap-4">
-      <a href="donate.html" class="px-8 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
-      <a href="volunteer.html" class="px-8 py-3 rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:border-brand-400 hover:text-brand-500 transition-colors">Volunteer</a>
+      <a href="sponsor.html" class="px-8 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Sponsor a child</a>
+      <a href="donate.html" class="px-8 py-3 rounded-full border border-slate-200 text-slate-700 text-sm font-medium hover:border-brand-400 hover:text-brand-500 transition-colors">Give once</a>
     </div>
   </div>
 </section>
@@ -250,6 +284,38 @@
   </div>
 </footer>
 
+<script src="sponsor-children.js?v=20261019b"></script>
+<script>
+  // "Meet some of our children": first letter, name, age and dream of each child still waiting for a sponsor
+  (function () {
+    var list = (window.SPONSOR_CHILDREN || []).filter(function (c) { return c && c.name && !c.sponsored; });
+    var box = document.getElementById('impact-children');
+    var section = document.getElementById('impact-children-section');
+    if (!box || !section) return;
+    if (!list.length) { section.classList.add('hidden'); return; }
+    list.forEach(function (c) {
+      var a = document.createElement('a');
+      a.href = 'sponsor.html#children';
+      a.className = 'flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-lg transition-shadow';
+      var circle = document.createElement('span');
+      circle.className = 'w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center flex-shrink-0 text-xl font-semibold text-brand-500';
+      circle.textContent = c.name.charAt(0);
+      var text = document.createElement('span');
+      var name = document.createElement('span');
+      name.className = 'block font-semibold text-slate-900';
+      name.textContent = c.name + (c.age ? ', age ' + c.age : '');
+      text.appendChild(name);
+      if (c.dream) {
+        var dream = document.createElement('span');
+        dream.className = 'block text-sm text-slate-600 mt-1';
+        dream.textContent = 'Dreams of becoming: ' + c.dream;
+        text.appendChild(dream);
+      }
+      a.appendChild(circle); a.appendChild(text);
+      box.appendChild(a);
+    });
+  })();
+</script>
 <script>
   lucide.createIcons();
   const menuBtn = document.getElementById('mobile-menu-btn');

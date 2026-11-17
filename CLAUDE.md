@@ -28,7 +28,8 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 ## Content and safeguarding rules (never break these)
 - Use only facts the founder has approved. Never invent numbers, dates, partners or quotes.
 - Children: first names only. No health or family problems. No sponsored child's photo outside
-  the email-gated Sponsor page. Never add "persecution", "Muslim" or conversion language.
+  the email-gated Sponsor page (one founder-approved exception: the four 2020 Christmas play photos on Our Story).
+  Never add "persecution", "Muslim" or conversion language.
 - Planned projects (Computer & AI Training next, then the Women's Vocational Training Center and
   Foster Care) must never be described as started. No dates or costs for them.
 - Remove GPS and other photo metadata (EXIF) from every new photo, and resize it to about 1200px.
@@ -45,8 +46,9 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 2. Our Story says "no outside funding to date". Is that still true?
 3. ~~Did Sunday school also run during 2016–2024?~~ Answered 18 Nov 2026: no, apart from one event. In December
    2020 the family went back to Layyah for one day to hold a Christmas play with the Sunday school children
-   (now one sentence in the 2016 part of Our Story). **The 2020 Christmas play photos include sponsored children,
-   so they must not go on any public page.** Their banner also shows adults' full names and faces.
+   (now in the 2016 part of Our Story). The four 2020 Christmas play photos include sponsored children. **On 18 Nov
+   2026 the founder chose to make an exception and show them on Our Story**, with the banner's names and faces
+   blurred (`images/christmas-play-2020-*.jpg`). This exception covers only these four photos.
 4. Does the parents' written permission cover the new Sunday school photos?
    A close-up of one girl is saved but not used: `sunday-school-2024-girl-colouring.jpg`.
 5. Volunteer roles, and whether the proposal PDF can go on the website.

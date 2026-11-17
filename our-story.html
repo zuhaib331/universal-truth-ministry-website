@@ -131,6 +131,9 @@
   .pg-gallery img.wide{grid-column:span 2;height:260px}
   @media (min-width:768px){.pg-gallery{grid-template-columns:repeat(4,1fr)}.pg-gallery img{height:150px}.pg-gallery img.wide{grid-column:span 4;height:300px}}
   .pg-caption{font-size:.85rem;line-height:1.55;color:#64748b;margin-top:.75rem}
+  /* Gallery with one wide photo and three small ones (2020 Christmas play) */
+  .pg-gallery.three img:last-child{grid-column:span 2;height:200px}
+  @media (min-width:768px){.pg-gallery.three{grid-template-columns:repeat(3,1fr)}.pg-gallery.three img.wide{grid-column:span 3}.pg-gallery.three img:last-child{grid-column:auto;height:150px}}
 </style>
 </head>
 
@@ -279,6 +282,14 @@
             In December 2020, the family went back to Layyah for one day to hold a Christmas play with the
             Sunday school children.
           </p>
+          <p class="pg-eyebrow" style="margin-top:2rem;margin-bottom:.9rem">Christmas play, December 2020</p>
+          <div class="pg-gallery three">
+            <img data-zoom="story" class="wide" loading="lazy" decoding="async" src="images/christmas-play-2020-nativity.jpg" style="object-position:center 55%" alt="Children acting the Christmas story: angels, shepherds and three kings around the baby" />
+            <img data-zoom="story" loading="lazy" decoding="async" src="images/christmas-play-2020-welcome.jpg" style="object-position:center 45%" alt="Girls holding letters that spell WELCOME at the start of the Christmas play" />
+            <img data-zoom="story" loading="lazy" decoding="async" src="images/christmas-play-2020-kings.jpg" style="object-position:center 40%" alt="Children in paper crowns acting the wise men visiting King Herod" />
+            <img data-zoom="story" loading="lazy" decoding="async" src="images/christmas-play-2020-singing.jpg" style="object-position:center 50%" alt="Children singing together on the carpeted stage" />
+          </div>
+          <p class="pg-caption">Children acting the Christmas story in Layyah, 21 December 2020.</p>
         </div>
       </div>
 

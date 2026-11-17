@@ -46,6 +46,80 @@
   .photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
   /* Lighter photo shade (Oct 2026): darker only behind the text, so the children's faces and colours show. */
   .photo-shade{background:radial-gradient(ellipse 65% 60% at 50% 50%,rgba(15,23,42,.6) 0%,rgba(15,23,42,.36) 60%,rgba(15,23,42,.22) 100%),linear-gradient(to top,rgba(15,23,42,.6) 0%,rgba(15,23,42,0) 30%)}.photo-shade~div h1,.photo-shade~div p{text-shadow:0 1px 3px rgba(15,23,42,.7),0 2px 18px rgba(15,23,42,.75)}.photo-shade~div p.text-brand-400,.photo-shade~div .text-brand-400{color:#fcd34d}
+
+  /* ===== Page styles (Nov 2026 refresh). Same pg- classes as What We Do, Our Story and Impact, kept in the page. ===== */
+  .pg-wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+  .pg-narrow{max-width:48rem;margin:0 auto}
+  .pg-eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.875rem;font-weight:500;color:#946b08}
+  .pg-h2{font-family:'Fraunces',serif;font-weight:600;color:#0f172a;font-size:clamp(1.75rem,3.2vw,2.4rem);line-height:1.2;letter-spacing:-.01em}
+  .pg-lead{font-size:1.1rem;line-height:1.75;color:#475569}
+  .pg-center{text-align:center}
+  .pg-h2+.pg-lead{margin-top:1rem}
+  .pg-narrow.pg-gap{margin-bottom:3rem}
+  .pg-p{font-size:1.05rem;line-height:1.8;color:#475569}
+  .pg-p+.pg-p{margin-top:1.1rem}
+  .pg-split{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+  @media (min-width:960px){.pg-split{grid-template-columns:1.1fr .9fr;gap:3.5rem}}
+  .pg-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+  .pg-chips span{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid #fde68a;color:#0f172a;font-size:.85rem;font-weight:500;padding:.45rem .9rem;border-radius:9999px}
+  .pg-chips svg,.pg-chips i{width:.95rem;height:.95rem;color:#946b08}
+
+  /* Price card */
+  .dn-price{background:#0f172a;border-radius:1.25rem;padding:2.25rem;color:#fff;box-shadow:0 24px 48px -20px rgba(15,23,42,.45)}
+  .dn-price small{display:block;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;color:#fcd34d;font-weight:500}
+  .dn-price b{display:block;font-family:'Fraunces',serif;font-size:clamp(3.25rem,7vw,4.5rem);line-height:1;font-weight:600;color:#fcd34d;margin-top:.9rem}
+  .dn-price b span{font-size:1.1rem;color:rgba(255,255,255,.8);font-family:'Inter',sans-serif;font-weight:400;margin-left:.35rem}
+  .dn-price p{color:rgba(255,255,255,.78);font-size:.98rem;line-height:1.65;margin-top:.9rem}
+  .dn-price hr{border:0;border-top:1px solid rgba(255,255,255,.14);margin:1.5rem 0}
+
+  /* Photo cards: where your money goes */
+  .pg-plans{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2.75rem}
+  @media (min-width:768px){.pg-plans{grid-template-columns:repeat(3,1fr)}}
+  .pg-plan{display:flex;flex-direction:column;background:#fff;border-radius:1rem;overflow:hidden;box-shadow:0 10px 28px -14px rgba(15,23,42,.22)}
+  .pg-plan img{width:100%;height:190px;object-fit:cover}
+  .pg-plan-body{padding:1.5rem 1.6rem 1.7rem}
+  .pg-plan-body h3{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;color:#0f172a;display:flex;align-items:center;gap:.6rem}
+  .pg-plan-body h3 svg,.pg-plan-body h3 i{width:1.15rem;height:1.15rem;color:#946b08}
+  .pg-plan-body p{font-size:.93rem;line-height:1.65;color:#475569;margin-top:.5rem}
+
+  /* Bank details + steps */
+  .dn-bank{background:#fff;border-radius:1.25rem;border-top:4px solid #d4a015;padding:2rem;box-shadow:0 18px 40px -18px rgba(15,23,42,.28)}
+  .dn-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;border-top:1px solid #e2e8f0}
+  .dn-row:first-of-type{border-top:0}
+  .dn-row dt{font-size:.8rem;color:#64748b;margin-bottom:.2rem}
+  .dn-row dd{font-size:.98rem;font-weight:600;color:#0f172a;word-break:break-all}
+  .dn-copy{flex-shrink:0;display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;font-weight:500;color:#946b08;border:1px solid #fde68a;background:#fffbeb;border-radius:9999px;padding:.35rem .75rem;cursor:pointer;transition:all .2s}
+  .dn-copy:hover{background:#d4a015;border-color:#d4a015;color:#fff}
+  .dn-copy svg,.dn-copy i{width:.85rem;height:.85rem}
+  .dn-note{font-size:.9rem;line-height:1.65;color:#475569;margin-top:1rem;padding-top:1rem;border-top:1px solid #e2e8f0}
+  .dn-steps{list-style:none;margin:0;padding:0}
+  .dn-steps li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;margin-bottom:1.75rem}
+  .dn-num{width:3rem;height:3rem;border-radius:9999px;background:#fef3c7;color:#946b08;font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .dn-steps h3{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;color:#0f172a}
+  .dn-steps p{font-size:.95rem;line-height:1.65;color:#475569;margin-top:.3rem}
+  .dn-contact{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.75rem}
+  .dn-contact a{display:inline-flex;align-items:center;gap:.4rem;font-size:.88rem;font-weight:500;color:#0f172a;background:#fff;border:1px solid #e2e8f0;border-radius:9999px;padding:.45rem .9rem;transition:border-color .2s}
+  .dn-contact a:hover{border-color:#d4a015;color:#946b08}
+  .dn-contact svg,.dn-contact i{width:.95rem;height:.95rem;color:#946b08}
+
+  /* FAQ */
+  .dn-faq details{background:#fff;border:1px solid #e2e8f0;border-radius:1rem;padding:1.25rem 1.5rem;margin-bottom:.75rem}
+  .dn-faq details[open]{border-color:#fde68a;box-shadow:0 10px 24px -16px rgba(15,23,42,.25)}
+  .dn-faq summary{font-weight:600;color:#0f172a;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  .dn-faq summary::-webkit-details-marker{display:none}
+  .dn-faq summary:after{content:"+";font-size:1.4rem;line-height:1;color:#946b08;font-weight:400}
+  .dn-faq details[open] summary:after{content:"\2212"}
+  .dn-faq p{font-size:.95rem;line-height:1.7;color:#475569;margin-top:.75rem}
+  .dn-faq a{color:#946b08;font-weight:500}
+
+  /* Call to action band */
+  .pg-cta{background:#fffbeb;padding:5rem 0}
+  .pg-btns{display:flex;flex-wrap:wrap;gap:.875rem;margin-top:2rem}
+  .pg-center .pg-btns{justify-content:center}
+  .pg-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:9999px;font-size:.95rem;font-weight:500;transition:all .2s}
+  .pg-btn svg,.pg-btn i{width:1rem;height:1rem}
+  .pg-btn-gold{background:#d4a015;color:#fff}.pg-btn-gold:hover{background:#946b08}
+  .pg-btn-line{border:1px solid #cbd5e1;color:#0f172a;background:#fff}.pg-btn-line:hover{border-color:#d4a015;color:#946b08}
 </style>
 </head>
 
@@ -132,94 +206,178 @@
   </div>
 </section>
 
-<!-- DONATE -->
-<section class="py-24">
-  <div class="max-w-3xl mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-start">
-      <div class="w-14 h-14 rounded-full bg-brand-400/10 flex items-center justify-center flex-shrink-0">
-        <i data-lucide="gift" class="w-6 h-6 text-brand-500"></i>
-      </div>
+<!-- INTRO + PRICE -->
+<section class="py-20">
+  <div class="pg-wrap">
+    <div class="pg-split">
       <div>
-        <h2 class="text-2xl font-semibold text-slate-900 mb-4">Support the Ministry</h2>
-        <p class="leading-relaxed mb-6">
+        <p class="pg-eyebrow mb-4">Support the Ministry</p>
+        <h2 class="pg-h2 mb-5">Your gift keeps the Education Center open</h2>
+        <p class="pg-p">
           Your gift goes directly to the work of Universal Truth Ministry, from the Education
           Center running today to the programs planned to follow. Every gift is used with care and
-          accounted for honestly. Give directly by bank transfer using the details below.
+          accounted for honestly.
         </p>
-
-        <div class="rounded-2xl bg-brand-50 p-6 mb-8">
-          <p class="text-2xl font-semibold text-slate-900 mb-2">About US$38 every month (US$456 a year) covers one child's place</p>
-          <p class="text-sm leading-relaxed text-slate-600">
-            Over a year, that pays for one child's place at the Education Center: teaching in
-            core subjects, learning materials, and Religious Studies, including Bible teaching,
-            Gospel learning, Christian identity, and discipleship. Give whatever amount works for
-            you, monthly or once. Gifts go to the Center as a whole rather than to one named child.
-          </p>
-          <p class="text-sm leading-relaxed text-slate-600 mt-3">
-            Would you like to get to know one child?
-            <a href="sponsor.html" class="text-brand-500 font-medium hover:text-brand-400">Sponsor a child's place</a>.
-          </p>
-        </div>
-
-        <div class="rounded-2xl bg-slate-50 border-l-4 border-brand-400 p-8 mb-8 shadow-xl">
-          <p class="text-xs uppercase tracking-[0.3em] text-brand-500 font-medium mb-6">Give by Bank Transfer</p>
-          <div class="text-sm">
-            <div>
-              <p class="text-slate-500 mb-2">Account Title</p>
-              <p class="text-slate-900 font-semibold">Zuhaib Asgher</p>
-            </div>
-            <div class="border-t border-slate-200 mt-3 pt-4">
-              <p class="text-slate-500 mb-2">Bank</p>
-              <p class="text-slate-900 font-semibold">Faysal Bank Limited</p>
-            </div>
-            <div class="border-t border-slate-200 mt-3 pt-4">
-              <p class="text-slate-500 mb-2">Branch</p>
-              <p class="text-slate-900 font-semibold">IBB Gulberg Industrial Area, Lahore, Pakistan</p>
-            </div>
-            <div class="border-t border-slate-200 mt-3 pt-4">
-              <p class="text-slate-500 mb-2">IBAN</p>
-              <p class="text-slate-900 font-semibold break-all">PK16FAYS3599391000001323</p>
-            </div>
-            <div class="border-t border-slate-200 mt-3 pt-4">
-              <p class="text-slate-500 mb-2">SWIFT / BIC <span class="text-slate-500">(for international transfers)</span></p>
-              <p class="text-slate-900 font-semibold">FAYSPKKA</p>
-            </div>
-            <div class="border-t border-slate-200 mt-3 pt-4">
-              <p class="text-slate-600 leading-relaxed">
-                This account is held in the name of our founder, Zuhaib Asgher, who has personally
-                funded the ministry since 2024. Every gift is recorded, and we send a written receipt
-                for each one.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <p class="leading-relaxed mb-4 text-sm text-slate-500">
-          Have questions, or want to let us know a gift is on its way? Reach out any time, and we'll send your receipt.
+        <p class="pg-p">
+          Give whatever amount works for you, monthly or once, by bank transfer.
         </p>
+        <div class="pg-chips">
+          <span><i data-lucide="users"></i>35 children</span>
+          <span><i data-lucide="calendar-days"></i>6 classes a week</span>
+          <span><i data-lucide="receipt"></i>A written receipt for every gift</span>
+        </div>
+        <div class="pg-btns">
+          <a href="#give" class="pg-btn pg-btn-gold">Give by bank transfer <i data-lucide="arrow-down"></i></a>
+          <a href="sponsor.html" class="pg-btn pg-btn-line">Sponsor a child</a>
+        </div>
+      </div>
 
-        <div class="space-y-3">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-brand-400/10 flex items-center justify-center flex-shrink-0">
-              <i data-lucide="phone" class="w-4 h-4 text-brand-500"></i>
-            </span>
-            <a href="tel:+923084040671" class="text-slate-700 text-sm hover:text-brand-500 transition-colors">+92 308 4040671</a>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-brand-400/10 flex items-center justify-center flex-shrink-0">
-              <i data-lucide="mail" class="w-4 h-4 text-brand-500"></i>
-            </span>
-            <a href="mailto:zuhaib.asgher@universaltruthministry.org" class="text-slate-700 text-sm hover:text-brand-500 transition-colors break-all">zuhaib.asgher@universaltruthministry.org</a>
-          </div>
+      <div class="dn-price">
+        <small>One child's place</small>
+        <b>US$38<span>a month</span></b>
+        <p>About US$38 every month (US$456 a year) covers one child's place at the Education Center for a full year.</p>
+        <hr />
+        <p style="margin-top:0">Gifts go to the Center as a whole rather than to one named child, so every child is cared for in the same way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE YOUR MONEY GOES -->
+<section class="py-20 bg-slate-50">
+  <div class="pg-wrap">
+    <div class="pg-narrow pg-center">
+      <p class="pg-eyebrow mb-4">Where your money goes</p>
+      <h2 class="pg-h2">One child's place for a full year</h2>
+      <p class="pg-lead">Over a year, your gift pays for one child's place at the Education Center.</p>
+    </div>
+    <div class="pg-plans">
+      <div class="pg-plan">
+        <img src="images/education-center-teaching.jpg" alt="A teacher with students at the Education Center" style="object-position:center 60%" loading="lazy" />
+        <div class="pg-plan-body">
+          <h3><i data-lucide="book-open"></i>Help with school</h3>
+          <p>Teaching in English, Mathematics and Science on the Punjab Board curriculum, alongside the government school the children attend by day.</p>
+        </div>
+      </div>
+      <div class="pg-plan">
+        <img src="images/education-center-books.jpg" alt="Students at the Education Center holding their books" style="object-position:center 30%" loading="lazy" />
+        <div class="pg-plan-body">
+          <h3><i data-lucide="cross"></i>Bible teaching</h3>
+          <p>Religious Studies, including Bible teaching, Gospel learning, Christian identity, and discipleship, so each child can know Jesus for themselves.</p>
+        </div>
+      </div>
+      <div class="pg-plan">
+        <img src="images/classroom-writing.jpg" alt="Students writing in class at the Education Center" style="object-position:center 70%" loading="lazy" />
+        <div class="pg-plan-body">
+          <h3><i data-lucide="pencil"></i>Learning materials</h3>
+          <p>Books and the learning materials a child needs to keep up in class and grow in confidence.</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="mt-16 pt-10 border-t border-slate-100 text-center">
-      <a href="volunteer.html" class="inline-flex items-center gap-2 text-brand-500 font-medium hover:text-brand-400 transition-colors">
-        Prefer to give your time instead? See Volunteer
-        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-      </a>
+<!-- GIVE BY BANK TRANSFER -->
+<section id="give" class="py-20" style="scroll-margin-top:1rem">
+  <div class="pg-wrap">
+    <div class="pg-narrow pg-center pg-gap">
+      <p class="pg-eyebrow mb-4">How to give</p>
+      <h2 class="pg-h2">Give by bank transfer</h2>
+    </div>
+    <div class="pg-split" style="align-items:start">
+      <div class="dn-bank">
+        <dl>
+          <div class="dn-row"><div><dt>Account Title</dt><dd>Zuhaib Asgher</dd></div></div>
+          <div class="dn-row"><div><dt>Bank</dt><dd>Faysal Bank Limited</dd></div></div>
+          <div class="dn-row"><div><dt>Branch</dt><dd>IBB Gulberg Industrial Area, Lahore, Pakistan</dd></div></div>
+          <div class="dn-row"><div><dt>IBAN</dt><dd>PK16FAYS3599391000001323</dd></div>
+            <button type="button" class="dn-copy" data-copy="PK16FAYS3599391000001323" aria-label="Copy IBAN"><i data-lucide="copy"></i><span>Copy</span></button></div>
+          <div class="dn-row"><div><dt>SWIFT / BIC (for international transfers)</dt><dd>FAYSPKKA</dd></div>
+            <button type="button" class="dn-copy" data-copy="FAYSPKKA" aria-label="Copy SWIFT code"><i data-lucide="copy"></i><span>Copy</span></button></div>
+        </dl>
+        <p class="dn-note">
+          This account is held in the name of our founder, Zuhaib Asgher, who has personally
+          funded the ministry since 2024. Every gift is recorded, and we send a written receipt
+          for each one.
+        </p>
+      </div>
+
+      <ol class="dn-steps">
+        <li>
+          <span class="dn-num">1</span>
+          <div>
+            <h3>Send your gift</h3>
+            <p>Use the bank details to send any amount, monthly or once.</p>
+          </div>
+        </li>
+        <li>
+          <span class="dn-num">2</span>
+          <div>
+            <h3>Let us know it is on its way</h3>
+            <p>Have questions, or want to let us know a gift is on its way? Reach out any time.</p>
+            <div class="dn-contact">
+              <a href="https://wa.me/923084040671" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp</a>
+              <a href="tel:+923084040671"><i data-lucide="phone"></i>+92 308 4040671</a>
+              <a href="mailto:zuhaib.asgher@universaltruthministry.org"><i data-lucide="mail"></i>Email us</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="dn-num">3</span>
+          <div>
+            <h3>Receive your receipt</h3>
+            <p>Every gift is recorded, and we send you a written receipt.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- DONOR FAQ -->
+<section class="py-20 bg-slate-50">
+  <div class="pg-wrap">
+    <div class="pg-narrow">
+      <div class="pg-center mb-10">
+        <p class="pg-eyebrow mb-4">Questions</p>
+        <h2 class="pg-h2">Questions donors ask</h2>
+      </div>
+      <div class="dn-faq">
+        <details>
+          <summary>Can I give monthly, or just once?</summary>
+          <p>Either. Give whatever amount works for you, monthly or once.</p>
+        </details>
+        <details>
+          <summary>Does my gift go to one child?</summary>
+          <p>Gifts go to the Center as a whole rather than to one named child. That way every child is cared for in the same way, whether or not they have a sponsor. If you would like to get to know one child, you can <a href="sponsor.html">sponsor a child's place</a>.</p>
+        </details>
+        <details>
+          <summary>Will I get a receipt?</summary>
+          <p>Yes. Every gift is recorded, and we send a written receipt for each one.</p>
+        </details>
+        <details>
+          <summary>Whose name is the bank account in?</summary>
+          <p>The account is held in the name of our founder, Zuhaib Asgher, who has personally funded the ministry since 2024.</p>
+        </details>
+        <details>
+          <summary>Can our church or group give together?</summary>
+          <p>Yes, and we would love that. Please <a href="contact.html">contact us</a> and we will talk it through together.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER WAYS -->
+<section class="pg-cta">
+  <div class="pg-wrap pg-center">
+    <div class="pg-narrow">
+      <h2 class="pg-h2">Not able to give right now?</h2>
+      <p class="pg-lead">You can still stand with these children.</p>
+      <div class="pg-btns">
+        <a href="prayer.html" class="pg-btn pg-btn-line"><i data-lucide="heart-handshake"></i>Pray with us</a>
+        <a href="volunteer.html" class="pg-btn pg-btn-line"><i data-lucide="hand-helping"></i>Volunteer</a>
+      </div>
     </div>
   </div>
 </section>
@@ -310,6 +468,14 @@
 
 <script>
   lucide.createIcons();
+  // Copy buttons on the bank details
+  document.querySelectorAll('.dn-copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var label = btn.querySelector('span');
+      var done = function () { label.textContent = 'Copied'; setTimeout(function () { label.textContent = 'Copy'; }, 1800); };
+      if (navigator.clipboard) { navigator.clipboard.writeText(btn.dataset.copy).then(done); }
+    });
+  });
   const menuBtn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
   if (menuBtn && menu) {

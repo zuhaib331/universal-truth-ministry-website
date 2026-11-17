@@ -14,7 +14,7 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 - Plain HTML pages, with Tailwind already built into `styles.css`. That file is trimmed (purged):
   **a Tailwind class that is not already in styles.css does nothing.** Check that a class exists first,
   or write the rule in the page's own `<style>` block.
-- **Cache rule:** pages load `styles.css?v=20261118a` and `sponsor-children.js?v=20261019c`.
+- **Cache rule:** pages load `styles.css?v=20261118b` and `sponsor-children.js?v=20261019c`.
   When you change one of these files, raise its `?v=` number on every page that loads it.
 - Icons come from `lucide.min.js`. It swaps each `<i data-lucide>` for an `<svg>`, so icon CSS must
   target `svg` as well as `i`.
@@ -37,10 +37,10 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 - 35 children (15 boys, 20 girls, ages 4–16), 6 classes a week, 2 local Christian teachers.
 - 20 students read the Bible daily, with a Monday Bible test.
 - Bible results: Matthew class average 88.5%, Mark 95.5%.
-- Sponsorship: about US$38 a month (US$456 a year).
+- Sponsorship: about US$38 a month (US$456 a year). Confirmed by the founder, 18 Nov 2026.
 
 ## Open questions for the founder
-1. Cost per child: the website says US$456 a year, but the budget sheet says US$447. Which one?
+1. ~~Cost per child: US$456 or US$447?~~ Answered 18 Nov 2026: **US$456 a year** (about US$38 a month) is correct.
 2. Our Story says "no outside funding to date". Is that still true?
 3. The Sunday school photos are dated 13 July 2024, and the gallery sits in the 2024 part of Our Story.
    Did Sunday school also run during 2016–2024? Where, and who taught it?

@@ -28,3 +28,6 @@
 
 /* Readable gold buttons (Nov 2026): dark text on gold, contrast 7.5:1. Overrides text-white and the dark hover. */
 .bg-brand-400.text-white{color:#0f172a}.bg-brand-400.text-white:hover{background-color:#e0ae2e;color:#0f172a}
+
+/* Skip to content link for keyboard users (Nov 2026): hidden until it gets focus. */
+.skip-link{position:absolute;left:1rem;top:-4rem;z-index:100;background:#e0ae2e;color:#0f172a;padding:.65rem 1.1rem;border-radius:.5rem;font-weight:600;font-size:.95rem;transition:top .15s}.skip-link:focus{top:1rem;outline:3px solid #fff;outline-offset:2px}#main:focus{outline:none}

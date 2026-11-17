@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css?v=20261118a" />
+<link rel="stylesheet" href="styles.css?v=20261118b" />
 <script src="lucide.min.js"></script>
 
 <style>
@@ -124,6 +124,7 @@
 </head>
 
 <body class="antialiased bg-white text-slate-600 font-sans">
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- NAV -->
 <header class="bg-slate-900 relative z-50">
@@ -195,6 +196,7 @@
     <!-- Blog link hidden until first real post: <a href="blog/index.html" class="block py-2 mt-3 border-t border-white/10 pt-4">Blog</a> -->
   </div>
 </header>
+<div id="main" tabindex="-1"></div>
 
 <!-- PAGE HEADER -->
 <section class="relative bg-slate-900 photo-header overflow-hidden">
@@ -202,7 +204,13 @@
   <div class="absolute inset-0 photo-shade"></div>
   <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
     <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">Get Involved</p>
-    <h1 class="text-white font-semibold text-4xl md:text-5xl">Donate</h1>
+    <h1 class="text-white font-semibold text-4xl md:text-5xl mb-6">Donate</h1>
+    <p class="text-lg leading-relaxed text-white/80 max-w-2xl mx-auto">
+      About US$38 every month (US$456 a year) covers one child's place at the Education Center.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mt-10">
+      <a href="#give" class="px-6 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Give by bank transfer</a>
+    </div>
   </div>
 </section>
 
@@ -227,7 +235,6 @@
           <span><i data-lucide="receipt"></i>A written receipt for every gift</span>
         </div>
         <div class="pg-btns">
-          <a href="#give" class="pg-btn pg-btn-gold">Give by bank transfer <i data-lucide="arrow-down"></i></a>
           <a href="sponsor.html" class="pg-btn pg-btn-line">Sponsor a child</a>
         </div>
       </div>

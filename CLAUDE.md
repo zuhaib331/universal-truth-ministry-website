@@ -18,7 +18,7 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
   When you change one of these files, raise its `?v=` number on every page that loads it.
 - Icons come from `lucide.min.js`. It swaps each `<i data-lucide>` for an `<svg>`, so icon CSS must
   target `svg` as well as `i`.
-- Homepage styles are the `hp-` classes in index.html. What We Do, Our Story, Impact, Donate, Get Involved, Volunteer, Prayer and Contact use the `pg-`
+- Homepage styles are the `hp-` classes in index.html. What We Do, Our Story, Impact, Donate, Get Involved, Volunteer, Prayer, Contact, Core Values, Vision & Mission and Statement of Faith use the `pg-`
   classes in their own `<style>` block. Our Story and What We Do have a photo viewer: add `data-zoom="group"` to an `<img>`.
 - Photo headers use `.photo-header` + `.photo-shade`, with `object-position` set on the faces
   (group 35%, books 30%, classroom-writing 70%, teaching 60%).
@@ -52,6 +52,6 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 - The photo viewer on the homepage photo strip.
 - Donate: "Where your money goes" and a donor FAQ.
 - A real email signup for updates.
-- Vision & Mission: remove the "2.5 times poverty" line.
+- ~~Vision & Mission: remove the "2.5 times poverty" line.~~ Done 18 Nov 2026.
 - Statement of Faith: add one belief-to-action sentence.
 - Sponsor: add a "whole child" line.

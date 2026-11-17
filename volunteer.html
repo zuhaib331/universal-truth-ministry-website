@@ -46,6 +46,75 @@
   .photo-header{display:flex;align-items:center;min-height:clamp(280px,34vw,540px);padding-top:4rem;padding-bottom:4rem}
   /* Lighter photo shade (Oct 2026): darker only behind the text, so the children's faces and colours show. */
   .photo-shade{background:radial-gradient(ellipse 65% 60% at 50% 50%,rgba(15,23,42,.6) 0%,rgba(15,23,42,.36) 60%,rgba(15,23,42,.22) 100%),linear-gradient(to top,rgba(15,23,42,.6) 0%,rgba(15,23,42,0) 30%)}.photo-shade~div h1,.photo-shade~div p{text-shadow:0 1px 3px rgba(15,23,42,.7),0 2px 18px rgba(15,23,42,.75)}.photo-shade~div p.text-brand-400,.photo-shade~div .text-brand-400{color:#fcd34d}
+
+  /* ===== Page styles (Nov 2026 refresh). Same pg- classes as What We Do, Our Story, Impact and Donate, kept in the page. ===== */
+  .pg-wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+  .pg-narrow{max-width:48rem;margin:0 auto}
+  .pg-narrow.pg-gap{margin-bottom:3rem}
+  .pg-eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.875rem;font-weight:500;color:#946b08}
+  .pg-h2{font-family:'Fraunces',serif;font-weight:600;color:#0f172a;font-size:clamp(1.75rem,3.2vw,2.4rem);line-height:1.2;letter-spacing:-.01em}
+  .pg-lead{font-size:1.1rem;line-height:1.75;color:#475569}
+  .pg-h2+.pg-lead{margin-top:1rem}
+  .pg-center{text-align:center}
+  .pg-p{font-size:1.05rem;line-height:1.8;color:#475569}
+  .pg-p+.pg-p{margin-top:1.1rem}
+  .pg-split{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+  @media (min-width:960px){.pg-split{grid-template-columns:1fr 1fr;gap:3.5rem}}
+  .pg-photo-main{width:100%;height:clamp(260px,32vw,420px);object-fit:cover;border-radius:1.25rem;box-shadow:0 24px 48px -24px rgba(15,23,42,.45)}
+  .pg-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+  .pg-chips span{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid #fde68a;color:#0f172a;font-size:.85rem;font-weight:500;padding:.45rem .9rem;border-radius:9999px}
+  .pg-chips svg,.pg-chips i{width:.95rem;height:.95rem;color:#946b08}
+
+  /* Photo cards */
+  .pg-plans{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2.75rem}
+  @media (min-width:640px){.pg-plans{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.pg-plans.four{grid-template-columns:repeat(4,1fr)}.pg-plans.three{grid-template-columns:repeat(3,1fr)}}
+  .pg-plan{display:flex;flex-direction:column;background:#fff;border-radius:1rem;overflow:hidden;box-shadow:0 10px 28px -14px rgba(15,23,42,.22);transition:box-shadow .2s}
+  a.pg-plan:hover{box-shadow:0 18px 40px -16px rgba(15,23,42,.35)}
+  .pg-plan img{width:100%;height:180px;object-fit:cover}
+  .pg-plan-body{display:flex;flex-direction:column;flex:1;padding:1.5rem 1.6rem 1.7rem}
+  .pg-plan-body h3{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:#0f172a;display:flex;align-items:center;gap:.6rem}
+  .pg-plan-body h3 svg,.pg-plan-body h3 i{width:1.2rem;height:1.2rem;color:#946b08}
+  .pg-plan-body p{font-size:.93rem;line-height:1.65;color:#475569;margin-top:.5rem;flex:1}
+  .pg-more{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.1rem;color:#946b08;font-weight:500;font-size:.93rem}
+  .pg-more svg,.pg-more i{width:1rem;height:1rem}
+
+  /* Icon cards */
+  .pg-cards{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2.75rem}
+  @media (min-width:640px){.pg-cards{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.pg-cards.three{grid-template-columns:repeat(3,1fr)}.pg-cards.four{grid-template-columns:repeat(4,1fr)}}
+  .pg-card{background:#fff;border-radius:1rem;padding:1.75rem;box-shadow:0 12px 32px -14px rgba(15,23,42,.22);border-top:4px solid #d4a015}
+  .pg-ico{width:3rem;height:3rem;border-radius:9999px;background:#fef3c7;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+  .pg-ico svg,.pg-ico i{width:1.35rem;height:1.35rem;color:#946b08}
+  .pg-card h3{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;color:#0f172a}
+  .pg-card p{font-size:.95rem;line-height:1.65;color:#475569;margin-top:.5rem}
+  .pg-checks{list-style:none;margin:.9rem 0 0;padding:0}
+  .pg-checks li{display:flex;gap:.65rem;align-items:flex-start;font-size:.95rem;line-height:1.6;color:#475569;padding:.55rem 0;border-top:1px solid #f1f5f9}
+  .pg-checks li:first-child{border-top:0}
+  .pg-checks svg,.pg-checks i{flex-shrink:0;width:1.1rem;height:1.1rem;color:#d4a015;margin-top:.2rem}
+
+  /* Pull quote */
+  .pg-pull{margin:0 auto;max-width:44rem;padding:1.75rem 2rem;background:#fffbeb;border-left:4px solid #d4a015;border-radius:0 1rem 1rem 0}
+  .pg-pull p{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.45rem);line-height:1.5;color:#0f172a}
+  .pg-pull span{display:block;margin-top:.75rem;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#946b08;font-weight:500}
+
+  /* Contact cards */
+  .pg-contacts{display:grid;grid-template-columns:1fr;gap:.85rem}
+  .pg-contact{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid #e2e8f0;border-radius:1rem;padding:1rem 1.25rem;transition:border-color .2s,box-shadow .2s}
+  a.pg-contact:hover{border-color:#d4a015;box-shadow:0 10px 24px -16px rgba(15,23,42,.3)}
+  .pg-contact .pg-ico{margin:0;flex-shrink:0}
+  .pg-contact small{display:block;font-size:.78rem;color:#64748b}
+  .pg-contact b{display:block;font-weight:600;color:#0f172a;font-size:.95rem;word-break:break-all}
+  .pg-formcard{background:#fff;border-radius:1.25rem;border-top:4px solid #d4a015;padding:2rem;box-shadow:0 18px 40px -18px rgba(15,23,42,.28)}
+
+  /* Call to action band */
+  .pg-cta{background:#fffbeb;padding:5rem 0}
+  .pg-btns{display:flex;flex-wrap:wrap;gap:.875rem;margin-top:2rem}
+  .pg-center .pg-btns{justify-content:center}
+  .pg-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:9999px;font-size:.95rem;font-weight:500;transition:all .2s}
+  .pg-btn svg,.pg-btn i{width:1rem;height:1rem}
+  .pg-btn-gold{background:#d4a015;color:#fff}.pg-btn-gold:hover{background:#946b08}
+  .pg-btn-line{border:1px solid #cbd5e1;color:#0f172a;background:#fff}.pg-btn-line:hover{border-color:#d4a015;color:#946b08}
 </style>
 </head>
 
@@ -133,32 +202,69 @@
 </section>
 
 <!-- VOLUNTEER -->
-<section class="py-24">
-  <div class="max-w-3xl mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-start">
-      <div class="w-14 h-14 rounded-full bg-brand-400/10 flex items-center justify-center flex-shrink-0">
-        <i data-lucide="users" class="w-6 h-6 text-brand-500"></i>
-      </div>
+<section class="py-20">
+  <div class="pg-wrap">
+    <div class="pg-split">
       <div>
-        <h2 class="text-2xl font-semibold text-slate-900 mb-4">Give your time or expertise</h2>
-        <p class="leading-relaxed mb-6">
+        <p class="pg-eyebrow mb-4">Volunteer</p>
+        <h2 class="pg-h2 mb-5">Give your time or expertise</h2>
+        <p class="pg-p">
           Maybe you've got teaching experience, legal or governance know-how, fundraising skills,
           or just some time and a willingness to help. We'd genuinely love to hear from you.
+        </p>
+        <p class="pg-p">
           Right now it's mostly one person building this, so any extra hands make a real
           difference.
         </p>
-        <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">
-          Get in touch to volunteer
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
+        <div class="pg-btns">
+          <a href="contact.html?reason=volunteer" class="pg-btn pg-btn-gold">Get in touch to volunteer <i data-lucide="arrow-right"></i></a>
+          <a href="https://wa.me/923084040671" target="_blank" rel="noopener" class="pg-btn pg-btn-line"><i data-lucide="message-circle"></i>WhatsApp</a>
+        </div>
+      </div>
+      <img src="images/education-center-teaching.jpg" alt="A lesson at the Universal Truth Education Center in Layyah" class="pg-photo-main" style="object-position:center 60%" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- HOW YOU CAN HELP -->
+<section class="py-20 bg-slate-50">
+  <div class="pg-wrap">
+    <div class="pg-narrow pg-center">
+      <p class="pg-eyebrow mb-4">How you can help</p>
+      <h2 class="pg-h2">Any of these makes a real difference</h2>
+    </div>
+    <div class="pg-cards four">
+      <div class="pg-card">
+        <span class="pg-ico"><i data-lucide="graduation-cap"></i></span>
+        <h3>Teaching experience</h3>
+      </div>
+      <div class="pg-card">
+        <span class="pg-ico"><i data-lucide="scale"></i></span>
+        <h3>Legal or governance know-how</h3>
+      </div>
+      <div class="pg-card">
+        <span class="pg-ico"><i data-lucide="hand-coins"></i></span>
+        <h3>Fundraising skills</h3>
+      </div>
+      <div class="pg-card">
+        <span class="pg-ico"><i data-lucide="clock"></i></span>
+        <h3>Time and a willingness to help</h3>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="mt-16 pt-10 border-t border-slate-100 text-center">
-      <a href="prayer.html" class="inline-flex items-center gap-2 text-brand-500 font-medium hover:text-brand-400 transition-colors">
-        Next: Pray With Us
-        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-      </a>
+<!-- OTHER WAYS -->
+<section class="pg-cta">
+  <div class="pg-wrap pg-center">
+    <div class="pg-narrow">
+      <h2 class="pg-h2">Other ways to stand with us</h2>
+      <p class="pg-lead">Prayer, time, or giving: each one is real support.</p>
+      <div class="pg-btns">
+        <a href="prayer.html" class="pg-btn pg-btn-line"><i data-lucide="hand-heart"></i>Pray with us</a>
+        <a href="sponsor.html" class="pg-btn pg-btn-line"><i data-lucide="heart-handshake"></i>Sponsor a child</a>
+        <a href="donate.html" class="pg-btn pg-btn-line"><i data-lucide="gift"></i>Give</a>
+      </div>
     </div>
   </div>
 </section>

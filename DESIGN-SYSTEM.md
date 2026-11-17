@@ -260,3 +260,42 @@ children's faces and bright clothes. **The two overlay divs are replaced by one:
   styles.css and index.html.
 
 **Cache rule:** pages now load `styles.css?v=20261019e`.
+
+---
+
+## Saving rule for Claude (27 Oct 2026)
+
+Twice, a save to the founder's computer reported success but wrote the OLD file. Both times the
+new file had been copied to the outputs folder only seconds before the save. Rule: copy first,
+save in a later step, then re-stage the file from the computer and compare it byte for byte
+before telling the founder it is done.
+
+---
+
+## New homepage (17 Nov 2026)
+
+Rebuilt after the founder said the site felt dull (compared with tenninemission.com). Order:
+hero (headline says who we are; Matthew 19:14 as a small quote) > gold moving band "LEARN • GROW •
+BELIEVE • LEAD" (stops for reduced-motion users) > 3-photo strip > From Our Founder (founder.jpg, his
+2007/2016/2024 words from the letters' PROJECT_BLOCK, 4-step timeline) > Why This Matters (3 cards:
+HIES 2024-25 girls 1 in 3; Census 2023 Layyah women's literacy 52% vs men 71%; 35 children) > Our Work
+cards (Center "Running now", Sponsor "US$38 a month", Computer & AI Training "Next in our plan", using
+only the approved wording) > impact numbers (35 / 6 / 2 / 20) > cream Get Involved cards > contact > footer.
+All homepage styles are `hp-` classes in index.html's own `<style>` block (not in styles.css).
+Lucide swaps `<i>` for `<svg>`, so icon CSS must target `svg` as well as `i`.
+
+---
+
+## Page refresh (17 Nov 2026): What We Do, Our Story, Impact
+
+- These three pages use the `pg-` classes in their own `<style>` block.
+- **What We Do:** fact chips; a photo collage; "One afternoon, the whole child" (Mind, Faith, Care,
+  Family cards); planned projects as photo cards with "Next in our plan" / "Planned" labels; a cream
+  call-to-action band.
+- **Our Story:** the same words, set as a timeline (The start, 2007, 2016, 2024, Today), with a
+  pull quote. A Sunday school gallery (photos dated 13 July 2024) sits in the 2024 step.
+- **Impact:** number cards; Bible results (Matthew 88.5%, Mark 95.5%) with progress bars.
+- **Photo viewer:** `img[data-zoom="group"]` opens a lightbox. Click to zoom, move the cursor (or
+  drag on a phone) to look around, use the arrows or a swipe to change photo, and Esc to close.
+  It is on Our Story and What We Do.
+- Website work moved to Claude Code on the founder's computer. See `CLAUDE.md` in the Website folder.

@@ -43,8 +43,10 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 ## Open questions for the founder
 1. ~~Cost per child: US$456 or US$447?~~ Answered 18 Nov 2026: **US$456 a year** (about US$38 a month) is correct.
 2. Our Story says "no outside funding to date". Is that still true?
-3. The Sunday school photos are dated 13 July 2024, and the gallery sits in the 2024 part of Our Story.
-   Did Sunday school also run during 2016–2024? Where, and who taught it?
+3. ~~Did Sunday school also run during 2016–2024?~~ Answered 18 Nov 2026: no, apart from one event. In December
+   2020 the family went back to Layyah for one day to hold a Christmas play with the Sunday school children
+   (now one sentence in the 2016 part of Our Story). **The 2020 Christmas play photos include sponsored children,
+   so they must not go on any public page.** Their banner also shows adults' full names and faces.
 4. Does the parents' written permission cover the new Sunday school photos?
    A close-up of one girl is saved but not used: `sunday-school-2024-girl-colouring.jpg`.
 5. Volunteer roles, and whether the proposal PDF can go on the website.

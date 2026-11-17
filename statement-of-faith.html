@@ -35,8 +35,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css?v=20261118b" />
-<script src="lucide.min.js"></script>
+<link rel="stylesheet" href="styles.css?v=20261118c" />
+<script src="lucide-lite.js?v=20261118a"></script>
 
 <style>
   h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
@@ -51,7 +51,7 @@
   .pg-wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
   .pg-narrow{max-width:48rem;margin:0 auto}
   .pg-narrow.pg-gap{margin-bottom:3rem}
-  .pg-eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.875rem;font-weight:500;color:#946b08}
+  .pg-eyebrow{font-size:1rem;font-weight:600;color:#946b08}
   .pg-h2{font-family:'Fraunces',serif;font-weight:600;color:#0f172a;font-size:clamp(1.75rem,3.2vw,2.4rem);line-height:1.2;letter-spacing:-.01em}
   .pg-lead{font-size:1.1rem;line-height:1.75;color:#475569}
   .pg-h2+.pg-lead{margin-top:1rem}
@@ -96,7 +96,7 @@
   /* Pull quote */
   .pg-pull{margin:0 auto;max-width:44rem;padding:1.75rem 2rem;background:#fffbeb;border-left:4px solid #d4a015;border-radius:0 1rem 1rem 0}
   .pg-pull p{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.45rem);line-height:1.5;color:#0f172a}
-  .pg-pull span{display:block;margin-top:.75rem;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#946b08;font-weight:500}
+  .pg-pull span{display:block;margin-top:.75rem;font-size:.8rem;color:#946b08;font-weight:500}
 
   /* Contact cards */
   .pg-contacts{display:grid;grid-template-columns:1fr;gap:.85rem}
@@ -111,7 +111,7 @@
   .pg-cta{background:#fffbeb;padding:5rem 0}
   .pg-btns{display:flex;flex-wrap:wrap;gap:.875rem;margin-top:2rem}
   .pg-center .pg-btns{justify-content:center}
-  .pg-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:9999px;font-size:.95rem;font-weight:500;transition:all .2s}
+  .pg-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:.5rem;font-size:1rem;font-weight:600;transition:all .2s}
   .pg-btn svg,.pg-btn i{width:1rem;height:1rem}
   .pg-btn-gold{background:#d4a015;color:#0f172a}.pg-btn-gold:hover{background:#e0ae2e}
   .pg-btn-line{border:1px solid #cbd5e1;color:#0f172a;background:#fff}.pg-btn-line:hover{border-color:#d4a015;color:#946b08}
@@ -125,11 +125,11 @@
   .fv-card p{font-size:.97rem;line-height:1.7;color:#475569;margin-top:.55rem}
   @media (min-width:640px){.fv-span2{grid-column:span 2}}
   .pg-dark{background:#0f172a;border-radius:1.25rem;padding:2.25rem;color:#fff;box-shadow:0 24px 48px -20px rgba(15,23,42,.45)}
-  .pg-dark small{display:block;text-transform:uppercase;letter-spacing:.25em;font-size:.75rem;color:#fcd34d;font-weight:500}
+  .pg-dark small{display:block;font-size:.95rem;color:#fcd34d;font-weight:600}
   .pg-dark .fv-big{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1.3;color:#fff;margin-top:1rem}
   .pg-dark .fv-quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.25rem,2.2vw,1.55rem);line-height:1.45;color:#fff;margin-top:1rem}
   .pg-dark p{color:rgba(255,255,255,.8);font-size:1rem;line-height:1.75;margin-top:1rem}
-  .pg-dark cite{display:block;margin-top:1rem;font-style:normal;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#fcd34d;font-weight:500}
+  .pg-dark cite{display:block;margin-top:1rem;font-style:normal;font-size:.8rem;color:#fcd34d;font-weight:500}
   .pg-source{font-size:.8rem;color:#64748b;margin-top:.75rem}
 </style>
 </head>
@@ -180,7 +180,7 @@
       <!-- Blog link hidden until first real post: <a href="blog/index.html" class="py-8 hover:text-brand-400 transition-colors">Blog</a> -->
     </div>
 
-    <a href="donate.html" class="hidden lg:inline-block px-5 py-2 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
+    <a href="donate.html" class="hidden lg:inline-block px-5 py-2 rounded-lg bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
 
     <button id="mobile-menu-btn" class="lg:hidden text-white p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <i data-lucide="menu" class="w-6 h-6"></i>
@@ -203,7 +203,7 @@
     <a href="volunteer.html" class="block py-2">Volunteer</a>
     <a href="prayer.html" class="block py-2">Prayer</a>
     <a href="contact.html" class="block py-2">Contact</a>
-    <a href="donate.html" class="block text-center mt-6 px-5 py-3 rounded-full bg-brand-400 text-white font-medium hover:bg-brand-500 transition-colors">Donate</a>
+    <a href="donate.html" class="block text-center mt-6 px-5 py-3 rounded-lg bg-brand-400 text-white font-medium hover:bg-brand-500 transition-colors">Donate</a>
     <!-- Blog link hidden until first real post: <a href="blog/index.html" class="block py-2 mt-3 border-t border-white/10 pt-4">Blog</a> -->
   </div>
 </header>
@@ -214,7 +214,7 @@
   <img src="images/education-center-books.jpg" alt="Students holding their books at the Universal Truth Education Center" class="absolute inset-0 w-full h-full object-cover" style="object-position: center 30%" />
   <div class="absolute inset-0 photo-shade"></div>
   <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
-    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">About Us</p>
+    <p class="text-sm font-medium text-brand-400 mb-4">About us</p>
     <h1 class="text-white font-semibold text-4xl md:text-5xl">Statement of Faith</h1>
   </div>
 </section>
@@ -233,37 +233,37 @@
     </div>
     <div class="pg-cards">
       <div class="fv-card">
-        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="book-open"></i></span><span class="fv-num">01</span></div>
+        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="book-open"></i></span></div>
         <h3>Scripture</h3>
         <p>We believe the Bible, the Old and New Testaments together, is God's own word. It does not contain errors, and it is the final authority for what we believe and how we live. Every belief in this statement comes from what the Bible teaches.</p>
       </div>
       <div class="fv-card">
-        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="sun"></i></span><span class="fv-num">02</span></div>
+        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="sun"></i></span></div>
         <h3>God</h3>
         <p>We believe there is one true God, who lives forever as three persons: Father, Son, and Holy Spirit. Each person is fully God, and all three are perfectly one.</p>
       </div>
       <div class="fv-card">
-        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="cross"></i></span><span class="fv-num">03</span></div>
+        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="cross"></i></span></div>
         <h3>Jesus Christ</h3>
         <p>We believe Jesus Christ is the Son of God, both fully God and fully human. He was born of the virgin Mary, lived a life without sin, and died on the cross to pay the full price for our sins. He rose from the dead in his body, and he is alive today, seated at the right hand of God the Father.</p>
       </div>
       <div class="fv-card">
-        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="gift"></i></span><span class="fv-num">04</span></div>
+        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="gift"></i></span></div>
         <h3>Salvation</h3>
         <p>We believe every person is separated from God by sin, and no amount of good works can close that gap. Salvation is a free gift from God, given by his grace and received through faith in Jesus Christ alone. Anyone who truly believes in him is forgiven, made new, and welcomed into God's own family.</p>
       </div>
       <div class="fv-card">
-        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="flame"></i></span><span class="fv-num">05</span></div>
+        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="flame"></i></span></div>
         <h3>The Holy Spirit</h3>
         <p>We believe the Holy Spirit comes to live in every believer at the moment they trust in Christ. He helps us understand the Bible, grow more like Jesus, and live and serve with a strength that is not our own.</p>
       </div>
       <div class="fv-card">
-        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="users"></i></span><span class="fv-num">06</span></div>
+        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="users"></i></span></div>
         <h3>The Church</h3>
         <p>We believe the Church is every person who has put their trust in Jesus Christ, from every nation and background, joined together as one family under him. We gather to worship God, learn his word, encourage one another, and carry his love out into the world around us.</p>
       </div>
       <div class="fv-card fv-span2">
-        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="sunrise"></i></span><span class="fv-num">07</span></div>
+        <div class="fv-top"><span class="pg-ico" style="margin:0"><i data-lucide="sunrise"></i></span></div>
         <h3>Christ's Return and Eternity</h3>
         <p>We believe Jesus Christ will return, that every person who has ever lived will be raised, and that all people will stand before God to give an account of their lives. Those who have trusted in Christ will live with him forever. Because of this hope, we long for every person to know him before that day comes.</p>
       </div>
@@ -276,7 +276,7 @@
   <div class="pg-wrap">
     <div class="pg-split">
       <div class="pg-dark">
-        <small>Our Calling</small>
+        <small>Our calling</small>
         <p>
           This is what we believe, and it is why Universal Truth Ministry exists. Every part of our
           work, from the Education Center in Layyah to Religious Studies, including Bible teaching,
@@ -298,7 +298,7 @@
       <h2 class="pg-h2">Meet the people living it out</h2>
       <p class="pg-lead">Meet the people who lead the Ministry and teach the children at the Education Center.</p>
       <div class="pg-btns">
-        <a href="our-team.html" class="pg-btn pg-btn-gold">Next: Meet Our Team <i data-lucide="arrow-right"></i></a>
+        <a href="our-team.html" class="pg-btn pg-btn-gold">Next: Meet our team</a>
         <a href="core-values.html" class="pg-btn pg-btn-line">Our Core Values</a>
       </div>
     </div>
@@ -345,7 +345,7 @@
           <li><a href="prayer.html" class="text-white/60 hover:text-brand-400 transition-colors">Prayer</a></li>
           <li><a href="contact.html" class="text-white/60 hover:text-brand-400 transition-colors">Contact</a></li>
         </ul>
-        <a href="donate.html" class="inline-block mt-6 px-5 py-2 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
+        <a href="donate.html" class="inline-block mt-6 px-5 py-2 rounded-lg bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
       </div>
 
       <div>
@@ -372,7 +372,7 @@
         </ul>
         <div class="flex items-center gap-3 mt-6">
           <a href="https://www.linkedin.com/company/universal-truth-ministry/" target="_blank" rel="noopener" aria-label="Universal Truth Ministry on LinkedIn"
-             class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-400 transition-colors">
+             class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-white hover:bg-brand-400 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
           </a>
         </div>

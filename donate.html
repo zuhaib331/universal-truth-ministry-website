@@ -35,8 +35,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css?v=20261118b" />
-<script src="lucide.min.js"></script>
+<link rel="stylesheet" href="styles.css?v=20261118c" />
+<script src="lucide-lite.js?v=20261118a"></script>
 
 <style>
   h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
@@ -50,7 +50,7 @@
   /* ===== Page styles (Nov 2026 refresh). Same pg- classes as What We Do, Our Story and Impact, kept in the page. ===== */
   .pg-wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
   .pg-narrow{max-width:48rem;margin:0 auto}
-  .pg-eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.875rem;font-weight:500;color:#946b08}
+  .pg-eyebrow{font-size:1rem;font-weight:600;color:#946b08}
   .pg-h2{font-family:'Fraunces',serif;font-weight:600;color:#0f172a;font-size:clamp(1.75rem,3.2vw,2.4rem);line-height:1.2;letter-spacing:-.01em}
   .pg-lead{font-size:1.1rem;line-height:1.75;color:#475569}
   .pg-center{text-align:center}
@@ -66,7 +66,7 @@
 
   /* Price card */
   .dn-price{background:#0f172a;border-radius:1.25rem;padding:2.25rem;color:#fff;box-shadow:0 24px 48px -20px rgba(15,23,42,.45)}
-  .dn-price small{display:block;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;color:#fcd34d;font-weight:500}
+  .dn-price small{display:block;font-size:.95rem;color:#fcd34d;font-weight:600}
   .dn-price b{display:block;font-family:'Fraunces',serif;font-size:clamp(3.25rem,7vw,4.5rem);line-height:1;font-weight:600;color:#fcd34d;margin-top:.9rem}
   .dn-price b span{font-size:1.1rem;color:rgba(255,255,255,.8);font-family:'Inter',sans-serif;font-weight:400;margin-left:.35rem}
   .dn-price p{color:rgba(255,255,255,.78);font-size:.98rem;line-height:1.65;margin-top:.9rem}
@@ -116,7 +116,7 @@
   .pg-cta{background:#fffbeb;padding:5rem 0}
   .pg-btns{display:flex;flex-wrap:wrap;gap:.875rem;margin-top:2rem}
   .pg-center .pg-btns{justify-content:center}
-  .pg-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:9999px;font-size:.95rem;font-weight:500;transition:all .2s}
+  .pg-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:.5rem;font-size:1rem;font-weight:600;transition:all .2s}
   .pg-btn svg,.pg-btn i{width:1rem;height:1rem}
   .pg-btn-gold{background:#d4a015;color:#0f172a}.pg-btn-gold:hover{background:#e0ae2e}
   .pg-btn-line{border:1px solid #cbd5e1;color:#0f172a;background:#fff}.pg-btn-line:hover{border-color:#d4a015;color:#946b08}
@@ -169,7 +169,7 @@
       <!-- Blog link hidden until first real post: <a href="blog/index.html" class="py-8 hover:text-brand-400 transition-colors">Blog</a> -->
     </div>
 
-    <a href="donate.html" class="hidden lg:inline-block px-5 py-2 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors" aria-current="page">Donate</a>
+    <a href="donate.html" class="hidden lg:inline-block px-5 py-2 rounded-lg bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors" aria-current="page">Donate</a>
 
     <button id="mobile-menu-btn" class="lg:hidden text-white p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <i data-lucide="menu" class="w-6 h-6"></i>
@@ -192,7 +192,7 @@
     <a href="volunteer.html" class="block py-2">Volunteer</a>
     <a href="prayer.html" class="block py-2">Prayer</a>
     <a href="contact.html" class="block py-2">Contact</a>
-    <a href="donate.html" class="block text-center mt-6 px-5 py-3 rounded-full bg-brand-400 text-white font-medium hover:bg-brand-500 transition-colors">Donate</a>
+    <a href="donate.html" class="block text-center mt-6 px-5 py-3 rounded-lg bg-brand-400 text-white font-medium hover:bg-brand-500 transition-colors">Donate</a>
     <!-- Blog link hidden until first real post: <a href="blog/index.html" class="block py-2 mt-3 border-t border-white/10 pt-4">Blog</a> -->
   </div>
 </header>
@@ -203,13 +203,13 @@
   <img src="images/education-center-group.jpg" alt="Students at the Universal Truth Education Center in Layyah" class="absolute inset-0 w-full h-full object-cover" style="object-position: center 35%" />
   <div class="absolute inset-0 photo-shade"></div>
   <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
-    <p class="uppercase tracking-[0.3em] text-sm font-medium text-brand-400 mb-4">Get Involved</p>
+    <p class="text-sm font-medium text-brand-400 mb-4">Get involved</p>
     <h1 class="text-white font-semibold text-4xl md:text-5xl mb-6">Donate</h1>
     <p class="text-lg leading-relaxed text-white/80 max-w-2xl mx-auto">
       About US$38 every month (US$456 a year) covers one child's place at the Education Center.
     </p>
     <div class="flex flex-wrap justify-center gap-4 mt-10">
-      <a href="#give" class="px-6 py-3 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Give by bank transfer</a>
+      <a href="#give" class="px-6 py-3 rounded-lg bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Give by bank transfer</a>
     </div>
   </div>
 </section>
@@ -429,7 +429,7 @@
           <li><a href="prayer.html" class="text-white/60 hover:text-brand-400 transition-colors">Prayer</a></li>
           <li><a href="contact.html" class="text-white/60 hover:text-brand-400 transition-colors">Contact</a></li>
         </ul>
-        <a href="donate.html" class="inline-block mt-6 px-5 py-2 rounded-full bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
+        <a href="donate.html" class="inline-block mt-6 px-5 py-2 rounded-lg bg-brand-400 text-white text-sm font-medium hover:bg-brand-500 transition-colors">Donate</a>
       </div>
 
       <div>
@@ -456,7 +456,7 @@
         </ul>
         <div class="flex items-center gap-3 mt-6">
           <a href="https://www.linkedin.com/company/universal-truth-ministry/" target="_blank" rel="noopener" aria-label="Universal Truth Ministry on LinkedIn"
-             class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-400 transition-colors">
+             class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-white hover:bg-brand-400 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
           </a>
         </div>

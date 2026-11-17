@@ -14,10 +14,11 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 - Plain HTML pages, with Tailwind already built into `styles.css`. That file is trimmed (purged):
   **a Tailwind class that is not already in styles.css does nothing.** Check that a class exists first,
   or write the rule in the page's own `<style>` block.
-- **Cache rule:** pages load `styles.css?v=20261118b` and `sponsor-children.js?v=20261019c`.
+- **Cache rule:** pages load `styles.css?v=20261118c`, `lucide-lite.js?v=20261118a` and `sponsor-children.js?v=20261019c`.
   When you change one of these files, raise its `?v=` number on every page that loads it.
-- Icons come from `lucide.min.js`. It swaps each `<i data-lucide>` for an `<svg>`, so icon CSS must
-  target `svg` as well as `i`.
+- Icons come from `lucide-lite.js` (10 KB, only the icons the site uses). It swaps each `<i data-lucide>` for an
+  `<svg>`, so icon CSS must target `svg` as well as `i`. To use a new icon, rebuild `lucide-lite.js` from the full
+  `lucide.min.js` (kept in the folder as the source, not loaded by any page).
 - Homepage styles are the `hp-` classes in index.html. What We Do, Our Story, Impact, Donate, Get Involved, Volunteer, Prayer, Contact, Core Values, Vision & Mission and Statement of Faith use the `pg-`
   classes in their own `<style>` block. Our Story and What We Do have a photo viewer: add `data-zoom="group"` to an `<img>`.
 - Photo headers use `.photo-header` + `.photo-shade`, with `object-position` set on the faces

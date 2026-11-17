@@ -144,6 +144,20 @@
   .hp-join a.hp-join-main .hp-ico i,.hp-join a.hp-join-main .hp-ico svg{color:#fff}
   .hp-join h3{font-size:1.05rem;font-weight:600;color:#0f172a}
   .hp-join p{font-size:.9rem;line-height:1.55;color:#475569;margin-top:.35rem}
+  /* Our ministries (Nov 2026): running now (photo cards) + planned (text only, no dates or costs) */
+  @media (min-width:900px){.hp-work.two{grid-template-columns:repeat(2,1fr)}}
+  .hp-work-body h4{font-family:'Fraunces',serif;font-size:1.35rem;color:#0f172a;font-weight:600}
+  .hp-subhead{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:#0f172a;margin-top:3.5rem;padding-bottom:.6rem;border-bottom:1px solid #e2e8f0}
+  .hp-subhead+.hp-work{margin-top:1.5rem}
+  .hp-plan-note{font-size:.95rem;color:#475569;margin-top:.75rem}
+  .hp-plans{display:grid;grid-template-columns:1fr;gap:1.75rem 1.5rem;margin-top:1.5rem}
+  @media (min-width:640px){.hp-plans{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.hp-plans{grid-template-columns:repeat(4,1fr)}}
+  .hp-plan{border-top:3px solid #fde68a;padding-top:1rem}
+  .hp-plan:first-child{border-top-color:#d4a015}
+  .hp-state{font-size:.85rem;font-weight:600;color:#946b08}
+  .hp-plan h4{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:#0f172a;margin-top:.3rem;line-height:1.3}
+  .hp-plan p{font-size:.95rem;line-height:1.6;color:#475569;margin-top:.45rem}
 </style>
 </head>
 
@@ -325,25 +339,26 @@
   </div>
 </section>
 
-<!-- OUR WORK -->
+<!-- OUR MINISTRIES: running now + planned -->
 <section style="padding:6rem 0">
   <div class="hp-wrap">
     <div style="max-width:48rem;margin:0 auto;text-align:center">
-      <h2 class="hp-h2">Lessons and faith, in the same afternoon.</h2>
+      <h2 class="hp-h2">Our ministries</h2>
       <p class="hp-lead" style="margin-top:1rem">
         The same teachers help a child with Mathematics and open the Bible with them.
         For us, these are one way of following Jesus.
       </p>
     </div>
-    <div class="hp-work">
+
+    <h3 class="hp-subhead">Running now</h3>
+    <div class="hp-work two">
       <a href="programs.html" class="hp-work-card">
         <div class="hp-work-img">
           <img loading="lazy" decoding="async" src="images/classroom-writing.jpg" style="object-position:center 70%" alt="Students writing at the Education Center" />
-          <span class="hp-tag">Running now</span>
         </div>
         <div class="hp-work-body">
-          <h3>Universal Truth Education Center</h3>
-          <p>Every afternoon, after government school, children get extra lessons in English, Mathematics and Science, with Bible teaching and discipleship.</p>
+          <h4>Universal Truth Education Center</h4>
+          <p>Extra lessons in English, Mathematics and Science, with Bible teaching, every afternoon after government school.</p>
           <span class="hp-link">See what we do</span>
         </div>
       </a>
@@ -353,23 +368,38 @@
           <span class="hp-tag">US$38 a month</span>
         </div>
         <div class="hp-work-body">
-          <h3>Sponsor a Child</h3>
-          <p>About US$38 every month covers one child's place at the Center. Meet the children who are waiting for a sponsor.</p>
+          <h4>Sponsor a Child</h4>
+          <p>About US$38 a month covers one child's place at the Center.</p>
           <span class="hp-link">Meet the children</span>
         </div>
       </a>
-      <a href="programs.html" class="hp-work-card">
-        <div class="hp-work-img">
-          <div class="hp-next"><i data-lucide="laptop"></i></div>
-          <span class="hp-tag">Next in our plan</span>
-        </div>
-        <div class="hp-work-body">
-          <h3>Computer &amp; AI Training</h3>
-          <p>The next project in our plan: computer and AI skills for the children already at our Center, to open doors for their future.</p>
-          <span class="hp-link">Read about our plans</span>
-        </div>
-      </a>
     </div>
+
+    <h3 class="hp-subhead">Planned</h3>
+    <p class="hp-plan-note">These are planned, not yet active.</p>
+    <div class="hp-plans">
+      <div class="hp-plan">
+        <span class="hp-state">Next in our plan</span>
+        <h4>Computer &amp; AI Training</h4>
+        <p>Computer and AI skills for the children already at our Center.</p>
+      </div>
+      <div class="hp-plan">
+        <span class="hp-state">Planned</span>
+        <h4>Women's Vocational Training Center</h4>
+        <p>Practical skills for women in our community, so they can earn an income.</p>
+      </div>
+      <div class="hp-plan">
+        <span class="hp-state">Planned</span>
+        <h4>Foster Care / Child Welfare</h4>
+        <p>Care for children whose families cannot afford to support them.</p>
+      </div>
+      <div class="hp-plan">
+        <span class="hp-state">Planned</span>
+        <h4>Community Development</h4>
+        <p>Support for families and communities beyond the classroom.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem"><a href="programs.html" class="hp-link" style="margin-top:0">See all our ministries</a></p>
   </div>
 </section>
 

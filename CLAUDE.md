@@ -14,7 +14,7 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 - Plain HTML pages, with Tailwind already built into `styles.css`. That file is trimmed (purged):
   **a Tailwind class that is not already in styles.css does nothing.** Check that a class exists first,
   or write the rule in the page's own `<style>` block.
-- **Cache rule:** pages load `styles.css?v=20261019e` and `sponsor-children.js?v=20261019c`.
+- **Cache rule:** pages load `styles.css?v=20261118a` and `sponsor-children.js?v=20261019c`.
   When you change one of these files, raise its `?v=` number on every page that loads it.
 - Icons come from `lucide.min.js`. It swaps each `<i data-lucide>` for an `<svg>`, so icon CSS must
   target `svg` as well as `i`.

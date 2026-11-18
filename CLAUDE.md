@@ -24,6 +24,7 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 - Photo headers use `.photo-header` + `.photo-shade`, with `object-position` set on the faces
   (group 35%, books 30%, classroom-writing 70%, teaching 60%).
 - Check every page at 1366px and 390px wide. There must be no sideways scrolling.
+- Every `<img>` has `width` and `height` (the photo's real size) so pages do not jump while loading. Add them to new photos too.
 
 ## Content and safeguarding rules (never break these)
 - Use only facts the founder has approved. Never invent numbers, dates, partners or quotes.
@@ -54,9 +55,9 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 5. Volunteer roles, and whether the proposal PDF can go on the website.
 
 ## Next ideas (agreed, not yet done)
-- The photo viewer on the homepage photo strip.
-- Donate: "Where your money goes" and a donor FAQ.
+- ~~The photo viewer on the homepage photo strip.~~ Done 18 Nov 2026.
+- ~~Donate: "Where your money goes" and a donor FAQ.~~ Done 17 Nov 2026.
 - A real email signup for updates.
 - ~~Vision & Mission: remove the "2.5 times poverty" line.~~ Done 18 Nov 2026.
-- Statement of Faith: add one belief-to-action sentence.
-- Sponsor: add a "whole child" line.
+- ~~Statement of Faith: add one belief-to-action sentence.~~ Done 18 Nov 2026.
+- ~~Sponsor: add a "whole child" line.~~ Done 18 Nov 2026.

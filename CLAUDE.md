@@ -57,7 +57,7 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 ## Next ideas (agreed, not yet done)
 - ~~The photo viewer on the homepage photo strip.~~ Done 18 Nov 2026.
 - ~~Donate: "Where your money goes" and a donor FAQ.~~ Done 17 Nov 2026.
-- A real email signup for updates.
+- ~~A real email signup for updates.~~ Done 18 Nov 2026: homepage box, sent to the inbox by Web3Forms (founder keeps the list).
 - ~~Vision & Mission: remove the "2.5 times poverty" line.~~ Done 18 Nov 2026.
 - ~~Statement of Faith: add one belief-to-action sentence.~~ Done 18 Nov 2026.
 - ~~Sponsor: add a "whole child" line.~~ Done 18 Nov 2026.

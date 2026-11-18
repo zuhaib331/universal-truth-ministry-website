@@ -19,7 +19,7 @@ Moved here from Cowork on 17 Nov 2026. Read `DESIGN-SYSTEM.md` before changing a
 - Icons come from `lucide-lite.js` (10 KB, only the icons the site uses). It swaps each `<i data-lucide>` for an
   `<svg>`, so icon CSS must target `svg` as well as `i`. To use a new icon, rebuild `lucide-lite.js` from the full
   `lucide.min.js` (kept in the folder as the source, not loaded by any page).
-- Homepage styles are the `hp-` classes in index.html. What We Do, Our Story, Impact, Donate, Get Involved, Volunteer, Prayer, Contact, Core Values, Vision & Mission and Statement of Faith use the `pg-`
+- Homepage styles are the `hp-` classes in index.html. What We Do, Our Story, Impact, Donate, Get Involved, Volunteer, Prayer, Contact, Core Values, Vision & Mission, Statement of Faith and Our Team use the `pg-`
   classes in their own `<style>` block. Our Story and What We Do have a photo viewer: add `data-zoom="group"` to an `<img>`.
 - Photo headers use `.photo-header` + `.photo-shade`, with `object-position` set on the faces
   (group 35%, books 30%, classroom-writing 70%, teaching 60%).
